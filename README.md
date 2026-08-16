@@ -65,3 +65,14 @@ requests is the fix.
 
 - `index.html` — the report, self-contained, no build step, works offline
 - `data/listings.json` — the scored listings behind it
+
+## Build
+
+`index.html` is generated — edit `report.src.html`, then:
+
+```bash
+python3 build.py report.src.html
+```
+
+The wrapper adds the doctype, `<meta charset="utf-8">` (required — the report is full of
+German umlauts and euro signs) and the viewport tag.
