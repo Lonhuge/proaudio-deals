@@ -37,19 +37,36 @@ Every row in the report says which benchmark it used.
 
 ## Coverage
 
-| Category | Status |
-|---|---|
-| Compressors, EQs, preamps, effects, mics | complete — 696 ads scraped, 20 qualifying listings |
-| Vintage / discontinued outboard | complete — 62 matched, 5 qualifying |
-| Guitar pedals | **incomplete** — see below |
-| Synthesizers | **incomplete** — see below |
-| Modular / Eurorack | **incomplete** — see below |
+| Category | Ads scraped | Status |
+|---|---|---|
+| Compressors, EQs, preamps, effects, mics | 696 | complete — 15 qualifying listings |
+| Vintage / discontinued outboard | 62 matched | complete — 5 qualifying |
+| Guitar pedals | 463 priced | scored, no qualifier yet |
+| Synthesizers | 383 priced | scored, no qualifier yet |
+| Modular / Eurorack | 363 priced | reference prices largely unavailable |
 
-The three newer categories were scraped (940 ads found, 802 candidates after filtering) but the
-run was cut short: requesting ad detail pages at six concurrent connections triggered a temporary
-IP-range block from Kleinanzeigen, and the partial results were then lost. The category filters
-are present in the report but carry no data yet. Rerunning at one connection with a delay between
-requests is the fix.
+The three newer categories are scraped and priced (`data/search_priced.json`, 1,209 ads with
+asking prices). What limits them is the *reference* side, not the scrape:
+
+- **Thomann does not stock much of it.** Chase Bliss, Noise Engineering and Mutable Instruments
+  return unrelated products; Mutable is discontinued outright. 953 of 1,066 distinct products
+  still need a reference price.
+- **Much of what did match is retail, not resale.** A single dealer accounts for a large share of
+  the pedal listings, selling sealed stock at or above Thomann's price — correctly scored at
+  94–133% and correctly excluded.
+
+## Matching
+
+`scraper/score.py` pairs an ad with a Thomann product only when **every identifying token in the
+product name also appears in the ad title**. Looser token-overlap scoring produced confident
+nonsense — a Meris Mercury 7 priced against the newer Mercury X (36% "discount"), a Nord Lead 2x
+against a Nord Lead A1 (50%), a Prophet 600 against a Prophet 6. Two rules do most of the work:
+
+- single-character tokens are significant — the whole difference between Mercury **7** and
+  Mercury **X** lives there, and dropping them as noise is what created the false bargains;
+- B-Stock and open-box listings never serve as the "new" reference.
+
+Run it with `python3 scraper/score.py`.
 
 ## Known limits
 
