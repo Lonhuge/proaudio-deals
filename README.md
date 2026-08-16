@@ -40,11 +40,14 @@ Every row in the report says which benchmark it used.
 | | |
 |---|---|
 | Ads scraped (all searches paged to exhaustion) | **7,833** |
-| Priced against a reference | **931** |
-| Past the seller filter | **252** |
+| Priced against a reference | **948** |
+| Past the seller filter | **258** |
 | Qualifying at ≤60% | **105** |
 
-Guitar pedals 95 · Modular 55 · Synths 41 · Outboard 37 · Vintage 24.
+Guitar pedals 95 · Modular 61 · Synths 41 · Outboard 37 · Vintage 24.
+
+Modular started at 16 and finished at 61 once SchneidersLaden — live for current stock, archived via
+the Wayback Machine for discontinued modules — replaced Thomann and Reverb as its reference.
 
 ## Three reference sources
 

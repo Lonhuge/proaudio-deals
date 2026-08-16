@@ -433,5 +433,110 @@
   "slug": "qu-bit-electronix-bloom",
   "price": 349,
   "snapshot": "20200927"
+ },
+ "qu-bit chord qu-bit": {
+  "slug": "qu-bit-electronix-chord-v2",
+  "price": 298,
+  "snapshot": "20201029"
+ },
+ "qu-bit electronix data": {
+  "slug": "qu-bit-electronix-data-bender",
+  "price": 360,
+  "snapshot": "20200930"
+ },
+ "qu-bit electronix nebulae": {
+  "slug": "qu-bit-electronix-nebulae-2",
+  "price": 427,
+  "snapshot": "20200928"
+ },
+ "qu-bit electronix pulsar": {
+  "slug": "qu-bit-electronix-pulsar",
+  "price": 310,
+  "snapshot": "20200928"
+ },
+ "qu-bit electronix scanned": {
+  "slug": "qu-bit-electronix-scanned",
+  "price": 378,
+  "snapshot": "20200814"
+ },
+ "qu-bit electronix synapse": {
+  "slug": "qu-bit-electronix-synapse",
+  "price": 330,
+  "snapshot": "20201001"
+ },
+ "steady state gate": {
+  "slug": "steady-state-fate-ssf-steady-state-gate",
+  "price": 309,
+  "snapshot": "20230206"
+ },
+ "steady state fate": {
+  "slug": "steady-state-fate-triptych",
+  "price": 428,
+  "snapshot": "20210728"
+ },
+ "tiptop bd808": {
+  "slug": "tiptop-audio-bd808",
+  "price": 128,
+  "snapshot": "20240614"
+ },
+ "tiptop buchla dual": {
+  "slug": "tiptop-audio-buchla-dual-oscillator-model-258t",
+  "price": 198,
+  "snapshot": "20220519"
+ },
+ "buchla tiptop": {
+  "slug": "tiptop-audio-buchla-frequency-shifter-285t",
+  "price": 318,
+  "snapshot": "20250214"
+ },
+ "buchla tiptop mixer/preamplifier": {
+  "slug": "tiptop-audio-buchla-mixer-preamplifier-model-207t",
+  "price": 269,
+  "snapshot": "20240526"
+ },
+ "tiptop buchla model": {
+  "slug": "tiptop-audio-buchla-spectral-processor-model-296t",
+  "price": 749,
+  "snapshot": "20240710"
+ },
+ "tiptop circadian rhythm": {
+  "slug": "tiptop-audio-circadian-rhythm",
+  "price": 564,
+  "snapshot": "20200926"
+ },
+ "tiptop vca": {
+  "slug": "tiptop-audio-vca",
+  "price": 112,
+  "snapshot": "20200923"
+ },
+ "tiptop wayout8": {
+  "slug": "tiptop-audio-wayout8",
+  "price": 44,
+  "snapshot": "20220124"
+ },
+ "tiptop z5000 multi": {
+  "slug": "tiptop-audio-z5000-multi-effect",
+  "price": 194,
+  "snapshot": "20200807"
+ },
+ "wmd mini slew": {
+  "slug": "wmd-ssf-mini-slew",
+  "price": 184,
+  "snapshot": "20200804"
+ },
+ "xaoc devices drezno": {
+  "slug": "xaoc-devices-drezno",
+  "price": 242,
+  "snapshot": "20200804"
+ },
+ "batumi xaoc poti": {
+  "slug": "xaoc-devices-poti-batumi-expander",
+  "price": 51,
+  "snapshot": "20200807"
+ },
+ "xaoc devices samara": {
+  "slug": "xaoc-devices-samara-ii",
+  "price": 180,
+  "snapshot": "20200921"
  }
 }
