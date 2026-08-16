@@ -33,20 +33,29 @@ def clean_rows(hits):
     return out
 
 def reference(ad_title, hits):
-    """Median asking price across Reverb rows that genuinely name this product."""
+    """Median asking price for the most specific Reverb product the ad actually names.
+
+    Prices are bucketed per product rather than pooled: a KeyLab Essential and a
+    KeyLab MkII both "contain" in a bare "KeyLab 49" ad, and averaging them invents
+    a reference that matches neither. The most specific product with at least two
+    comparable listings wins.
+    """
     at = ident(ad_title)
     if not at:
         return None
-    prices, names = [], []
+    buckets = {}
     for name, text, price in clean_rows(hits):
         nt = ident(name)
         if len(nt) < 2 or not nt <= at:      # same containment rule as the Thomann pass
             continue
-        prices.append(price)
-        names.append(name)
-    if len(prices) < 2:                       # one data point is not a market
-        return None
-    return int(statistics.median(prices)), names[0], len(prices)
+        buckets.setdefault(" ".join(sorted(nt)), (name, nt, []))[2].append(price)
+    best = None
+    for _, (name, nt, prices) in buckets.items():
+        if len(prices) < 2:                  # one data point is not a market
+            continue
+        if best is None or len(nt) > best[3]:
+            best = (int(statistics.median(prices)), name, len(prices), len(nt))
+    return best[:3] if best else None
 
 def main():
     ads  = json.load(open(HERE / "search_priced.json"))

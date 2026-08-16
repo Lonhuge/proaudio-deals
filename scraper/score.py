@@ -47,9 +47,9 @@ ACC = re.compile(r"\b(case|bag|cover|decksaver|stand|strap|adaptor|adapter|power
                  r"bracket|overlay|plugin|cloud|expander kit|softcase|flyht|thon|udg|rockboard|b-stock|b stock)\b", re.I)
 
 # an ad whose subject is a case/cover/PSU, in either language
-AD_ACC = re.compile(r"\b(case|gigcase|gigbag|hardshell|tasche|koffer|protector|cover|hulle|hülle|"
+AD_ACC = re.compile(r"\b(case|gigcase|gigbag|hardshell|flightcase|transportcase|tasche|koffer|protector|cover|hulle|hülle|"
                     r"bag|decksaver|staubschutz|dustcover|netzteil|power supply|psu|rack ?ears|"
-                    r"bracket|brackets|halterung|stand)\b", re.I)
+                    r"bracket|brackets|halterung|stand|manual|anleitung|handbuch|memory ?card|algorithm card|kopfhorer|kopfhörer|headphone|patchkabel|pedalboard|netzteil|expansion|ersatzteil|nur karton|leergehause|display|panel)\b", re.I)
 
 # words that carry no identifying weight when deciding "same product"
 FILLER = set("""audio pedal pedals effects designs instruments machines electronic electronics
