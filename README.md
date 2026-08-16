@@ -37,22 +37,31 @@ Every row in the report says which benchmark it used.
 
 ## Coverage
 
-| Category | Ads priced | Matched to a reference | Qualifying (<=60%) |
+| Category | Ads priced | Priced vs a reference | Qualifying (<=60%) |
 |---|---|---|---|
 | Compressors, EQs, preamps, effects, mics | 696 scraped | 114 | 15 |
 | Vintage / discontinued outboard | 62 matched | 56 | 5 |
-| Guitar pedals | 463 | ~64 | 5 |
-| Synthesizers | 383 | ~32 | 1 |
-| Modular / Eurorack | 363 | ~29 | 4 |
+| Guitar pedals | 463 | ~70 | 6 |
+| Synthesizers | 383 | ~65 | 4 |
+| Modular / Eurorack | 363 | ~31 | 4 |
 
-**31 qualifying listings; 54 rows sit within the 25–120% slider range.**
+**35 qualifying listings; 59 rows sit within the 25-120% slider range.**
 
-The ten qualifiers in the three newer categories are a **floor, not a complete answer**. Only 125 of
-1,209 priced listings could be matched to a reference price, because Thomann does not stock much of
-this world: Chase Bliss, Noise Engineering and Mutable Instruments return unrelated products, and
-Mutable is discontinued outright. The unmatched remainder stays in `data/search_priced.json` rather
-than being dropped — adding a source that covers boutique pedals and Eurorack (Reverb's EU listings,
-ModularGrid) would score it without rescraping.
+## Two reference sources
+
+`scraper/score.py` prices against **Thomann** (new price) for everything Thomann stocks.
+`scraper/score_reverb.py` prices the remainder against the **Reverb EU used market**, reached
+through Reverb's JSON API with an `X-Display-Currency: EUR` header — the HTML search pages render
+client-side and are an order of magnitude slower to scrape.
+
+Reverb rows are labelled **used**, not **new**, and the two are not interchangeable: 60% of the
+used market is a harder discount than 60% of new. A Reverb reference is the **median** of at least
+two condition-comparable listings; a single data point is not a market. Clones, cases, DIY kits,
+firmware ROMs and spares are rejected before the median is taken — the Mutable Instruments results
+are full of "Plaits clone" and "nanoRings" listings that would drag the reference down.
+
+Together the two sources price 166 of the 1,209 listings in the three newer categories. The rest is
+**unpriced, not rejected** — products neither source lists.
 
 ## Matching
 

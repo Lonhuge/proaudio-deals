@@ -241,8 +241,9 @@
     <h2>Browse by discount <span class="count">— move the threshold</span></h2>
     <p class="note">Your 60% rule is the default. Drag it up to see what a looser cutoff would let in, or down to find only the outliers. Percentages are against new price for current gear and against the used market for discontinued gear, so the two are not strictly comparable — the badge on each row says which.</p>
     <div class="caveat">
-      <span><b>Coverage of pedals, synths and modular is partial.</b> 1,209 priced listings were collected across the three categories, but only 111 could be matched to a reference price. Thomann does not stock much of this world — Chase Bliss, Noise Engineering and Mutable Instruments return unrelated products, and Mutable is discontinued outright.</span>
-      <span>So the nine qualifiers below are a floor, not a complete answer: there are almost certainly more bargains sitting in the unmatched remainder. Everything unmatched is listed in the repository rather than quietly dropped.</span>
+      <span><b>Two reference sources, and coverage is still partial.</b> Thomann prices what it stocks; a second pass against Reverb's EU market covers what it doesn't — Chase Bliss, Access Virus, older Nord and Waldorf gear. Together they price 166 of 1,209 listings in the three newer categories.</span>
+      <span>Rows scored against Reverb are marked <b>used</b> rather than <b>new</b>, because a used asking price is the only reference these products have. The two are not interchangeable: 60% of the used market is a harder discount than 60% of new.</span>
+      <span>The rest is unpriced, not rejected — roughly a thousand listings whose products neither source lists. They stay in the repository for a future pass.</span>
     </div>
 
     <div class="controls">
@@ -519,8 +520,23 @@
     {item:"Boss DS-1 Distortion", ask:55, nw:76, pct:72, seller:"Privat", ads:33, loc:"30900 Wedemark", vb:false, cat:"Guitar pedal", group:"pedal", ref:"new", href:"/s-anzeige/boss-ds-1-distortion-effektpedal-pedalboard/3481706114-74-2918"}
   ];
 
+  /* second reference pass — Reverb EU used market, for what Thomann does not stock */
+  const reverbRef = [
+    {item:"Clavia Nord Lead A1", ask:1000, nw:1899, pct:53, seller:"Phillip", ads:4, loc:"04179 Leipzig", vb:false,
+     cat:"Synthesizer", group:"synth", ref:"used", href:"/s-anzeige/nord-lead-a1-yamaha-pedal/3452029987-74-4236"},
+    {item:"Line 6 Helix LT", ask:500, nw:951, pct:53, seller:"MAB", ads:2, loc:"93053 Regensburg", vb:false,
+     cat:"Modeller / multi-FX", group:"pedal", ref:"used", caveat:"flagged: 2-ad seller", href:"/s-anzeige/line-6-helix-lt-nur-500-fast-neue-komplett-mit-original-box-/3476747535-74-7656"},
+    {item:"Clavia Nord Lead 2", ask:690, nw:1211, pct:57, seller:"Philipp", ads:27, loc:"78462 Konstanz", vb:false,
+     cat:"Synthesizer", group:"synth", ref:"used", href:"/s-anzeige/clavia-nord-lead-2-49-tasten-synthesizer/3447917783-74-9390"},
+    {item:"Clavia Nord Lead 2", ask:699, nw:1211, pct:58, seller:"dealer", ads:112, loc:"59519 Möhnesee", vb:false,
+     cat:"Synthesizer", group:"synth", ref:"used", href:"/s-anzeige/clavia-nord-lead-2-49-tasten-synthesizer-1-j-gewaehrleistung/3065365338-74-1455"},
+    {item:"Access Virus A Desktop", ask:549, nw:903, pct:61, seller:"dealer", ads:112, loc:"59519 Möhnesee", vb:false,
+     cat:"Synthesizer", group:"synth", ref:"used", href:"/s-anzeige/access-virus-a-desktop-synthesizer-1-jahr-gewaehrleistung/3430515043-74-1455"}
+  ];
+
   const ALL = [
     ...deals.map(d => ({...d, group:"outboard", ref:"new"})),
+    ...reverbRef,
     ...vintage.map(d => ({...d, group:"vintage", ref:"used"})),
     ...more,
     ...newcats
