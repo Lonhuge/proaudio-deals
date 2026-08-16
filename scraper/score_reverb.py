@@ -17,7 +17,7 @@ REJECT = re.compile(
     r"clone|nano|micro ?rings|nrings|diy|kit\b|pcb|panel only|faceplate|"
     r"manual|sticker|patch ?cable|cable|power supply|psu|adapter|adaptor|"
     r"eprom|firmware|rom\b|battery|replacement|spare|repair|for parts|"
-    r"expansion card|memory card|cartridge|overlay|t-?shirt|poster)\b", re.I)
+    r"expansion card|memory card|cartridge|overlay|t-?shirt|poster|b-?stock)\b", re.I)
 
 def clean_rows(hits):
     out = []

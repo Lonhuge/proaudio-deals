@@ -1,5 +1,29 @@
 [
  {
+  "id": "3483864488",
+  "href": "/s-anzeige/roland-jx-8p-synthesizer-/3483864488-74-4570",
+  "title": "Roland JX-8P Synthesizer ",
+  "price": 404,
+  "vb": false,
+  "cat": "synth",
+  "match": "Roland JX-8P",
+  "ref": 1012,
+  "n": 4,
+  "pct": 40
+ },
+ {
+  "id": "3485607732",
+  "href": "/s-anzeige/arturia-keylab-49-mkii-sehr-guter-zustand-originalkarton/3485607732-74-991",
+  "title": "Arturia KeyLab 49 MkII – sehr guter Zustand + Originalkarton",
+  "price": 179,
+  "vb": true,
+  "cat": "synth",
+  "match": "Arturia Arturia KeyLab 49 MkII",
+  "ref": 451,
+  "n": 2,
+  "pct": 40
+ },
+ {
   "id": "3478361503",
   "href": "/s-anzeige/nord-lead-a1/3478361503-74-301",
   "title": "Nord Lead A1",
@@ -9,6 +33,18 @@
   "match": "Nord Nord LEAD A1",
   "ref": 1899,
   "n": 5,
+  "pct": 47
+ },
+ {
+  "id": "3482507362",
+  "href": "/s-anzeige/mutable-instruments-plaits/3482507362-74-3492",
+  "title": "Mutable Instruments Plaits",
+  "price": 160,
+  "vb": true,
+  "cat": "modular",
+  "match": "Mutable Instruments Plaits",
+  "ref": 339,
+  "n": 7,
   "pct": 47
  },
  {
@@ -60,6 +96,18 @@
   "pct": 53
  },
  {
+  "id": "3478668260",
+  "href": "/s-anzeige/access-virus-rack-fehlerfrei/3478668260-74-3398",
+  "title": "Access - Virus Rack - Fehlerfrei",
+  "price": 400,
+  "vb": true,
+  "cat": "synth",
+  "match": "Access Access Virus Rack",
+  "ref": 708,
+  "n": 4,
+  "pct": 56
+ },
+ {
   "id": "3447917783",
   "href": "/s-anzeige/clavia-nord-lead-2-49-tasten-synthesizer/3447917783-74-9390",
   "title": "Clavia Nord Lead 2 - 49 Tasten Synthesizer",
@@ -94,6 +142,30 @@
   "ref": 903,
   "n": 2,
   "pct": 61
+ },
+ {
+  "id": "3468791852",
+  "href": "/s-anzeige/universal-audio-uafx-ruby-63-verstaerker-pedal-preamp/3468791852-74-3435",
+  "title": "Universal Audio UAFX Ruby '63 Verstärker Pedal PreAmp",
+  "price": 180,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Universal Audio UAFX RUBY",
+  "ref": 293,
+  "n": 2,
+  "pct": 61
+ },
+ {
+  "id": "3476952777",
+  "href": "/s-anzeige/waldorf-iridium-desktop-synthesizer/3476952777-74-6212",
+  "title": "Waldorf Iridium Desktop Synthesizer",
+  "price": 1150,
+  "vb": false,
+  "cat": "synth",
+  "match": "Waldorf WALDORF IRIDIUM DESKTOP MK2",
+  "ref": 1818,
+  "n": 7,
+  "pct": 63
  },
  {
   "id": "3482140198",
@@ -132,6 +204,18 @@
   "pct": 67
  },
  {
+  "id": "3473563870",
+  "href": "/s-anzeige/universal-audio-uafx-ruby-63/3473563870-74-1220",
+  "title": "Universal Audio UAFX Ruby '63",
+  "price": 195,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Universal Audio UAFX RUBY",
+  "ref": 293,
+  "n": 2,
+  "pct": 67
+ },
+ {
   "id": "3384029797",
   "href": "/s-anzeige/korg-kingkorg-neo-37-tasten-synthesizer-ovp-1-jahr-gewaehr-/3384029797-74-1455",
   "title": "Korg KingKorg Neo - 37 Tasten Synthesizer + OVP + 1 Jahr Gewähr.",
@@ -156,6 +240,18 @@
   "pct": 68
  },
  {
+  "id": "3485077984",
+  "href": "/s-anzeige/strymon-timeline-delay-pedal/3485077984-74-3400",
+  "title": "Strymon Timeline Delay pedal",
+  "price": 275,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Strymon Strymon Timeline",
+  "ref": 406,
+  "n": 6,
+  "pct": 68
+ },
+ {
   "id": "3454423488",
   "href": "/s-anzeige/access-virus-ti2-desktop-synth/3454423488-172-7755",
   "title": "Access Virus Ti2 - Desktop Synth",
@@ -165,6 +261,30 @@
   "match": "Access Virus Access Virus TI2 keyboard",
   "ref": 1962,
   "n": 5,
+  "pct": 69
+ },
+ {
+  "id": "3476487015",
+  "href": "/s-anzeige/moog-slim-phatty-analog-mono-synthesizer-audio-out-defekt/3476487015-74-5383",
+  "title": "Moog Slim Phatty - Analog Mono Synthesizer – Audio Out defekt",
+  "price": 510,
+  "vb": false,
+  "cat": "synth",
+  "match": "Moog Slim Phatty",
+  "ref": 735,
+  "n": 8,
+  "pct": 69
+ },
+ {
+  "id": "3478179586",
+  "href": "/s-anzeige/moog-messenger-analog-synthesizer/3478179586-74-3494",
+  "title": "Moog Messenger analog Synthesizer",
+  "price": 565,
+  "vb": true,
+  "cat": "synth",
+  "match": "Moog Moog Messenger",
+  "ref": 813,
+  "n": 3,
   "pct": 69
  },
  {
@@ -180,6 +300,18 @@
   "pct": 70
  },
  {
+  "id": "3482502312",
+  "href": "/s-anzeige/mutable-instruments-marbles/3482502312-74-3492",
+  "title": "Mutable Instruments Marbles",
+  "price": 200,
+  "vb": true,
+  "cat": "modular",
+  "match": "Mutable Instruments Marbles",
+  "ref": 286,
+  "n": 7,
+  "pct": 70
+ },
+ {
   "id": "3477699399",
   "href": "/s-anzeige/chase-bliss-habit/3477699399-74-7721",
   "title": "Chase Bliss Habit",
@@ -190,6 +322,42 @@
   "ref": 493,
   "n": 12,
   "pct": 71
+ },
+ {
+  "id": "3484460957",
+  "href": "/s-anzeige/make-noise-mmg/3484460957-74-1631",
+  "title": "Make Noise MMG",
+  "price": 240,
+  "vb": false,
+  "cat": "modular",
+  "match": "Make Noise MMG Module",
+  "ref": 340,
+  "n": 6,
+  "pct": 71
+ },
+ {
+  "id": "3485848358",
+  "href": "/s-anzeige/strymon-nightsky-reverb-pedal-neu-und-ovp/3485848358-74-6267",
+  "title": "Strymon Nightsky Reverb, Pedal, neu und OVP",
+  "price": 320,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Strymon STRYMON NIGHTSKY",
+  "ref": 449,
+  "n": 2,
+  "pct": 71
+ },
+ {
+  "id": "3483301948",
+  "href": "/s-anzeige/wampler-dual-fusion-v2-overdrive-verzerrer-pedal/3483301948-74-2010",
+  "title": "Wampler Dual Fusion v2 Overdrive Verzerrer Pedal",
+  "price": 170,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Wampler Dual Fusion",
+  "ref": 235,
+  "n": 3,
+  "pct": 72
  },
  {
   "id": "3482676396",
@@ -204,6 +372,30 @@
   "pct": 73
  },
  {
+  "id": "3484097297",
+  "href": "/s-anzeige/oberheim-matrix-6r/3484097297-74-4234",
+  "title": "Oberheim Matrix 6R",
+  "price": 850,
+  "vb": true,
+  "cat": "synth",
+  "match": "Oberheim Oberheim Matrix 6R",
+  "ref": 1168,
+  "n": 4,
+  "pct": 73
+ },
+ {
+  "id": "3448958858",
+  "href": "/s-anzeige/synthesizer-nord-lead-4/3448958858-74-3394",
+  "title": "Synthesizer Nord Lead 4",
+  "price": 999,
+  "vb": true,
+  "cat": "synth",
+  "match": "Nord Lead 4",
+  "ref": 1347,
+  "n": 2,
+  "pct": 74
+ },
+ {
   "id": "3482605075",
   "href": "/s-anzeige/asm-hydrasynth-desktop/3482605075-74-2633",
   "title": "ASM HYDRASYNTH DESKTOP",
@@ -214,6 +406,90 @@
   "ref": 707,
   "n": 2,
   "pct": 74
+ },
+ {
+  "id": "3479583089",
+  "href": "/s-anzeige/behringer-odyssey-analog-synthesizer/3479583089-74-1708",
+  "title": "Behringer Odyssey Analog Synthesizer",
+  "price": 400,
+  "vb": true,
+  "cat": "synth",
+  "match": "Behringer Odyssey",
+  "ref": 531,
+  "n": 9,
+  "pct": 75
+ },
+ {
+  "id": "3479285080",
+  "href": "/s-anzeige/frap-tools-brenso-eurorack-modul-analoger-dual-oszillator-top-/3479285080-74-1067",
+  "title": "Frap Tools Brenso, Eurorack Modul, analoger Dual-Oszillator, TOP ",
+  "price": 620,
+  "vb": true,
+  "cat": "modular",
+  "match": "Frap Tools Brenso",
+  "ref": 812,
+  "n": 3,
+  "pct": 76
+ },
+ {
+  "id": "3483488364",
+  "href": "/s-anzeige/wampler-dual-fusion-overdrive-pedal/3483488364-74-19105",
+  "title": "Wampler Dual Fusion Overdrive Pedal",
+  "price": 179,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Wampler Dual Fusion",
+  "ref": 235,
+  "n": 3,
+  "pct": 76
+ },
+ {
+  "id": "3483778941",
+  "href": "/s-anzeige/chase-bliss-tonal-recall-analog-delay/3483778941-74-721",
+  "title": "Chase Bliss Tonal Recall Analog Delay",
+  "price": 360,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Chase Bliss Audio Tonal Recall Analog Delay",
+  "ref": 475,
+  "n": 6,
+  "pct": 76
+ },
+ {
+  "id": "3485874479",
+  "href": "/s-anzeige/chase-bliss-lossy/3485874479-74-3395",
+  "title": "Chase bliss lossy",
+  "price": 290,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Chase Bliss Audio Lossy",
+  "ref": 380,
+  "n": 12,
+  "pct": 76
+ },
+ {
+  "id": "3473538122",
+  "href": "/s-anzeige/chase-bliss-wombtone-billy-strings-phaser-mint-/3473538122-74-3401",
+  "title": "Chase Bliss - Wombtone Billy Strings Phaser - MINT!",
+  "price": 450,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Chase Bliss Audio Wombtone Analog Phaser mkII",
+  "ref": 586,
+  "n": 2,
+  "pct": 77
+ },
+ {
+  "id": "3484444073",
+  "href": "/s-anzeige/keeley-eccos-delay/3484444073-74-3074",
+  "title": "Keeley Eccos Delay",
+  "price": 190,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Keeley Keeley Electronics ECCOS Delay Looper Pedal",
+  "ref": 246,
+  "n": 5,
+  "pct": 77
  },
  {
   "id": "3484511133",
@@ -228,6 +504,30 @@
   "pct": 77
  },
  {
+  "id": "3467251415",
+  "href": "/s-anzeige/chase-bliss-audio-mood/3467251415-74-7897",
+  "title": "Chase Bliss Audio Mood",
+  "price": 290,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Chase Bliss Audio CHASE BLISS AUDIO - MOOD",
+  "ref": 374,
+  "n": 8,
+  "pct": 78
+ },
+ {
+  "id": "3476438337",
+  "href": "/s-anzeige/chase-bliss-tonal-recall-pedal/3476438337-74-20462",
+  "title": "Chase Bliss Tonal Recall Pedal",
+  "price": 370,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Chase Bliss Audio Tonal Recall Analog Delay",
+  "ref": 475,
+  "n": 6,
+  "pct": 78
+ },
+ {
   "id": "3477859030",
   "href": "/s-anzeige/sequential-prophet-x-topzustand/3477859030-74-8106",
   "title": "Sequential Prophet X Topzustand",
@@ -236,6 +536,30 @@
   "cat": "synth",
   "match": "Sequential Sequential Prophet X Synthesizer",
   "ref": 2771,
+  "n": 2,
+  "pct": 78
+ },
+ {
+  "id": "3483373404",
+  "href": "/s-anzeige/strymon-magneto-ovp-eurorack/3483373404-74-5173",
+  "title": "Strymon Magneto | OVP | Eurorack",
+  "price": 420,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Strymon MAGNETO",
+  "ref": 541,
+  "n": 3,
+  "pct": 78
+ },
+ {
+  "id": "3484703344",
+  "href": "/s-anzeige/arturia-keylab-49-essential-midi-keyboard/3484703344-74-5365",
+  "title": "Arturia KeyLab 49 Essential MIDI Keyboard",
+  "price": 350,
+  "vb": true,
+  "cat": "synth",
+  "match": "Arturia Arturia KeyLab 49 MkII",
+  "ref": 451,
   "n": 2,
   "pct": 78
  },
@@ -252,6 +576,78 @@
   "pct": 79
  },
  {
+  "id": "3484906949",
+  "href": "/s-anzeige/korg-ms2000r-synthesizer-modul/3484906949-74-9684",
+  "title": "Korg MS2000R Synthesizer Modul",
+  "price": 350,
+  "vb": false,
+  "cat": "synth",
+  "match": "Korg MS2000R",
+  "ref": 443,
+  "n": 10,
+  "pct": 79
+ },
+ {
+  "id": "3458795197",
+  "href": "/s-anzeige/expert-sleepers-es-8-eurorack-audio-interface/3458795197-74-3478",
+  "title": "Expert Sleepers ES-8 - eurorack audio interface",
+  "price": 360,
+  "vb": true,
+  "cat": "modular",
+  "match": "Expert Sleepers ES-8",
+  "ref": 451,
+  "n": 3,
+  "pct": 80
+ },
+ {
+  "id": "3460471511",
+  "href": "/s-anzeige/qu-bit-nautilus/3460471511-74-1984",
+  "title": "Qu-Bit Nautilus",
+  "price": 290,
+  "vb": true,
+  "cat": "modular",
+  "match": "Qu-Bit Nautilus",
+  "ref": 361,
+  "n": 4,
+  "pct": 80
+ },
+ {
+  "id": "3483750812",
+  "href": "/s-anzeige/strymon-cloudburst/3483750812-74-3449",
+  "title": "Strymon cloudburst",
+  "price": 220,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Strymon Strymon Cloudburst Reverb",
+  "ref": 275,
+  "n": 2,
+  "pct": 80
+ },
+ {
+  "id": "3453334629",
+  "href": "/s-anzeige/xaoc-devices-kamieniec/3453334629-74-7701",
+  "title": "Xaoc Devices Kamieniec",
+  "price": 160,
+  "vb": false,
+  "cat": "modular",
+  "match": "Xaoc Devices Kamieniec",
+  "ref": 198,
+  "n": 5,
+  "pct": 81
+ },
+ {
+  "id": "3482871399",
+  "href": "/s-anzeige/4ms-metamodule-eurorack-neuwertig-/3482871399-74-1124",
+  "title": "4ms metamodule eurorack neuwertig ⭐️⭐️⭐️⭐️⭐️",
+  "price": 475,
+  "vb": false,
+  "cat": "modular",
+  "match": "4MS 4ms MetaModule",
+  "ref": 587,
+  "n": 3,
+  "pct": 81
+ },
+ {
   "id": "3485513513",
   "href": "/s-anzeige/chase-bliss-habit-mit-allem-zubehoer-in-ovp/3485513513-74-1162",
   "title": "Chase Bliss - Habit - mit allem Zubehör in OVP",
@@ -264,6 +660,90 @@
   "pct": 81
  },
  {
+  "id": "3485886075",
+  "href": "/s-anzeige/xaoc-devices-kamieniec-phaser-eurorack/3485886075-74-3353",
+  "title": "Xaoc Devices - Kamieniec phaser eurorack",
+  "price": 160,
+  "vb": false,
+  "cat": "modular",
+  "match": "Xaoc Devices Kamieniec",
+  "ref": 198,
+  "n": 5,
+  "pct": 81
+ },
+ {
+  "id": "3479663049",
+  "href": "/s-anzeige/expert-sleepers-es-9-eurorack-audio-interface-modul/3479663049-172-6471",
+  "title": "Expert Sleepers ES-9 Eurorack Audio Interface Modul",
+  "price": 500,
+  "vb": false,
+  "cat": "modular",
+  "match": "Expert Sleepers ES-9",
+  "ref": 613,
+  "n": 4,
+  "pct": 82
+ },
+ {
+  "id": "3479948904",
+  "href": "/s-anzeige/universal-audio-uafx-ruby-63/3479948904-74-21154",
+  "title": "Universal Audio UAFX Ruby '63",
+  "price": 239,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Universal Audio UAFX RUBY",
+  "ref": 293,
+  "n": 2,
+  "pct": 82
+ },
+ {
+  "id": "3480308879",
+  "href": "/s-anzeige/expert-sleepers-es-8-bitwig-edition-eurorack-modul/3480308879-74-4246",
+  "title": "Expert Sleepers ES-8 Bitwig Edition Eurorack Modul",
+  "price": 370,
+  "vb": false,
+  "cat": "modular",
+  "match": "Expert Sleepers ES-8",
+  "ref": 451,
+  "n": 3,
+  "pct": 82
+ },
+ {
+  "id": "3438155431",
+  "href": "/s-anzeige/xaoc-devices-drezno-v1-eurorack-modul/3438155431-74-5444",
+  "title": "Xaoc Devices Drezno V1 Eurorack Modul",
+  "price": 200,
+  "vb": false,
+  "cat": "modular",
+  "match": "Xaoc Devices Drezno",
+  "ref": 239,
+  "n": 4,
+  "pct": 84
+ },
+ {
+  "id": "3454739067",
+  "href": "/s-anzeige/noise-engineering-numeric-repetitor/3454739067-74-7618",
+  "title": "Noise Engineering - Numeric Repetitor",
+  "price": 170,
+  "vb": false,
+  "cat": "modular",
+  "match": "Noise Engineering Numeric Repetitor",
+  "ref": 203,
+  "n": 8,
+  "pct": 84
+ },
+ {
+  "id": "3462421135",
+  "href": "/s-anzeige/meris-enzo-synth-pedal/3462421135-74-3343",
+  "title": "Meris Enzo Synth Pedal",
+  "price": 220,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Meris Enzo",
+  "ref": 261,
+  "n": 6,
+  "pct": 84
+ },
+ {
   "id": "3476707841",
   "href": "/s-anzeige/sequential-prophet-rev2-8-voice-synthesizer/3476707841-74-3121",
   "title": "Sequential Prophet Rev2 8-Voice Synthesizer",
@@ -274,6 +754,54 @@
   "ref": 1791,
   "n": 2,
   "pct": 84
+ },
+ {
+  "id": "3484338074",
+  "href": "/s-anzeige/erica-synths-nightverb-effektgeraet-reverb-/3484338074-74-1182",
+  "title": "Erica Synths Nightverb Effektgerät (Reverb)",
+  "price": 450,
+  "vb": false,
+  "cat": "modular",
+  "match": "Erica Synths Nightverb",
+  "ref": 534,
+  "n": 10,
+  "pct": 84
+ },
+ {
+  "id": "3484646572",
+  "href": "/s-anzeige/strymon-big-sky-reverb-pedal/3484646572-74-9428",
+  "title": "Strymon Big Sky Reverb Pedal",
+  "price": 320,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Strymon Strymon Big Sky",
+  "ref": 379,
+  "n": 7,
+  "pct": 84
+ },
+ {
+  "id": "3485428889",
+  "href": "/s-anzeige/strymon-nightsky/3485428889-74-24158",
+  "title": "Strymon NightSky",
+  "price": 379,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Strymon STRYMON NIGHTSKY",
+  "ref": 449,
+  "n": 2,
+  "pct": 84
+ },
+ {
+  "id": "2121727857",
+  "href": "/s-anzeige/xaoc-devices-moskwa-roto-sequencer-eurorack/2121727857-74-9649",
+  "title": "Xaoc Devices Moskwa Roto Sequencer Eurorack",
+  "price": 275,
+  "vb": false,
+  "cat": "modular",
+  "match": "Xaoc Devices Moskwa",
+  "ref": 321,
+  "n": 2,
+  "pct": 86
  },
  {
   "id": "3479062157",
@@ -300,6 +828,66 @@
   "pct": 87
  },
  {
+  "id": "3474785650",
+  "href": "/s-anzeige/chase-bliss-mood-mki/3474785650-74-16339",
+  "title": "Chase Bliss Mood MKI",
+  "price": 325,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Chase Bliss Audio CHASE BLISS AUDIO - MOOD",
+  "ref": 374,
+  "n": 8,
+  "pct": 87
+ },
+ {
+  "id": "3481113063",
+  "href": "/s-anzeige/keeley-eccos-delay-looper/3481113063-74-7980",
+  "title": "Keeley Eccos Delay Looper",
+  "price": 215,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Keeley Keeley Electronics ECCOS Delay Looper Pedal",
+  "ref": 246,
+  "n": 5,
+  "pct": 87
+ },
+ {
+  "id": "3482909082",
+  "href": "/s-anzeige/make-noise-dpo/3482909082-74-3393",
+  "title": "Make Noise DPO",
+  "price": 400,
+  "vb": false,
+  "cat": "modular",
+  "match": "Make Noise DPO Module",
+  "ref": 460,
+  "n": 2,
+  "pct": 87
+ },
+ {
+  "id": "3485841151",
+  "href": "/s-anzeige/strymon-big-sky-reverbpedal-neu-und-ovp/3485841151-74-6267",
+  "title": "Strymon Big Sky, Reverbpedal, neu und OVP",
+  "price": 330,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Strymon Strymon Big Sky",
+  "ref": 379,
+  "n": 7,
+  "pct": 87
+ },
+ {
+  "id": "3246272017",
+  "href": "/s-anzeige/meris-enzo-synth-pedal/3246272017-74-3401",
+  "title": "Meris Enzo Synth Pedal",
+  "price": 230,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Meris Enzo",
+  "ref": 261,
+  "n": 6,
+  "pct": 88
+ },
+ {
   "id": "3479138736",
   "href": "/s-anzeige/asm-hydrasynth-desktop-synthesizer/3479138736-74-16333",
   "title": "ASM Hydrasynth Desktop Synthesizer",
@@ -324,6 +912,42 @@
   "pct": 88
  },
  {
+  "id": "3481976845",
+  "href": "/s-anzeige/make-noise-mmg-multimode-vactrol-gate-lpg-eurorack-modul/3481976845-74-4570",
+  "title": "Make Noise MMG Multimode Vactrol Gate LPG Eurorack Modul",
+  "price": 300,
+  "vb": true,
+  "cat": "modular",
+  "match": "Make Noise MMG Module",
+  "ref": 340,
+  "n": 6,
+  "pct": 88
+ },
+ {
+  "id": "3482901767",
+  "href": "/s-anzeige/make-noise-mmg/3482901767-74-3393",
+  "title": "Make Noise MMG",
+  "price": 300,
+  "vb": false,
+  "cat": "modular",
+  "match": "Make Noise MMG Module",
+  "ref": 340,
+  "n": 6,
+  "pct": 88
+ },
+ {
+  "id": "3485982055",
+  "href": "/s-anzeige/make-noise-qpas-filter-modul-modular-synth-eurorack/3485982055-74-2751",
+  "title": "Make Noise QPAS Filter Modul Modular Synth Eurorack",
+  "price": 250,
+  "vb": false,
+  "cat": "modular",
+  "match": "Make Noise QPAS Module",
+  "ref": 285,
+  "n": 11,
+  "pct": 88
+ },
+ {
   "id": "3474937360",
   "href": "/s-anzeige/moog-one-16-voice-synthesizer-neuwertig-inkl-zubehoer-und-ovp/3474937360-74-1649",
   "title": "Moog One 16-Voice Synthesizer, neuwertig inkl. Zubehör und OVP",
@@ -334,6 +958,30 @@
   "ref": 9805,
   "n": 2,
   "pct": 89
+ },
+ {
+  "id": "3471920237",
+  "href": "/s-anzeige/expert-sleepers-es-8-eurorack-usb-interface/3471920237-74-3391",
+  "title": "Expert Sleepers ES-8 Eurorack USB Interface",
+  "price": 375,
+  "vb": false,
+  "cat": "modular",
+  "match": "Expert Sleepers Expert Sleepers ES-8 Eurorack USB Audio Interface Module",
+  "ref": 411,
+  "n": 9,
+  "pct": 91
+ },
+ {
+  "id": "3472473114",
+  "href": "/s-anzeige/chase-bliss-audio-lossy-wie-neu-/3472473114-74-3138",
+  "title": "Chase Bliss Audio Lossy (wie neu)",
+  "price": 345,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Chase Bliss Audio Lossy",
+  "ref": 380,
+  "n": 12,
+  "pct": 91
  },
  {
   "id": "3479304594",
@@ -360,6 +1008,42 @@
   "pct": 92
  },
  {
+  "id": "3480910022",
+  "href": "/s-anzeige/walrus-audio-meraki/3480910022-74-3341",
+  "title": "Walrus Audio Meraki",
+  "price": 500,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Walrus Audio Meraki",
+  "ref": 542,
+  "n": 4,
+  "pct": 92
+ },
+ {
+  "id": "3140836854",
+  "href": "/s-anzeige/korg-phase-8-resonator-new-akustik-revo-synthesizer-ltd-tausch-/3140836854-74-7179",
+  "title": "KORG phase 8 Resonator_NEW Akustik Revo Synthesizer LTD._TAUSCH*",
+  "price": 888,
+  "vb": true,
+  "cat": "synth",
+  "match": "Korg phase 8",
+  "ref": 955,
+  "n": 3,
+  "pct": 93
+ },
+ {
+  "id": "3460837638",
+  "href": "/s-anzeige/noise-engineering-cursus-iteritas-eurorack-vco/3460837638-74-2076",
+  "title": "Noise Engineering Cursus Iteritas Eurorack VCO",
+  "price": 210,
+  "vb": false,
+  "cat": "modular",
+  "match": "Noise Engineering Cursus Iteritas",
+  "ref": 225,
+  "n": 3,
+  "pct": 93
+ },
+ {
   "id": "3483159354",
   "href": "/s-anzeige/line-6-helix-rack-helix-control-expression-pedal-fligthcase/3483159354-74-4045",
   "title": "Line 6 Helix Rack & Helix Control & Expression-Pedal + Fligthcase",
@@ -372,6 +1056,18 @@
   "pct": 93
  },
  {
+  "id": "3472070383",
+  "href": "/s-anzeige/noise-engineering-clep-diaz-eurorack-modul/3472070383-78-2451",
+  "title": "Noise Engineering Clep Diaz Eurorack Modul",
+  "price": 130,
+  "vb": true,
+  "cat": "modular",
+  "match": "Noise Engineering Clep Diaz",
+  "ref": 139,
+  "n": 4,
+  "pct": 94
+ },
+ {
   "id": "3467821832",
   "href": "/s-anzeige/moog-one-16-voice-61-key-polyphonic-analog-synthesizer/3467821832-74-1656",
   "title": "Moog One 16-Voice 61-Key Polyphonic Analog Synthesizer",
@@ -381,6 +1077,18 @@
   "match": "Moog Moog One 16-Voice",
   "ref": 8990,
   "n": 9,
+  "pct": 95
+ },
+ {
+  "id": "3484190382",
+  "href": "/s-anzeige/make-noise-morphagene-stereo-sampler-modul-neuwertig-2j-gewaehr-/3484190382-74-303",
+  "title": "Make Noise Morphagene Stereo Sampler Modul NEUwertig + 2J.GEWÄHR!",
+  "price": 429,
+  "vb": false,
+  "cat": "modular",
+  "match": "Make Noise Make Noise Morphagene Eurorack Sampler Module",
+  "ref": 452,
+  "n": 11,
   "pct": 95
  },
  {
@@ -396,6 +1104,18 @@
   "pct": 96
  },
  {
+  "id": "3481036725",
+  "href": "/s-anzeige/erica-synths-acidbox-iii/3481036725-74-30135",
+  "title": "Erica Synths Acidbox III",
+  "price": 400,
+  "vb": true,
+  "cat": "modular",
+  "match": "Erica Synths Acidbox III",
+  "ref": 411,
+  "n": 7,
+  "pct": 97
+ },
+ {
   "id": "3248506366",
   "href": "/s-anzeige/roland-juno-x-digitaler-synthesizer/3248506366-74-19600",
   "title": "Roland Juno X Digitaler Synthesizer",
@@ -406,6 +1126,30 @@
   "ref": 1626,
   "n": 3,
   "pct": 98
+ },
+ {
+  "id": "3435920223",
+  "href": "/s-anzeige/instruo-harmonaig-eurorack/3435920223-74-884",
+  "title": "Instruo Harmonaig Eurorack",
+  "price": 360,
+  "vb": true,
+  "cat": "modular",
+  "match": "Instruo Harmonaig",
+  "ref": 364,
+  "n": 5,
+  "pct": 99
+ },
+ {
+  "id": "3474027783",
+  "href": "/s-anzeige/chase-bliss-blooper/3474027783-74-4328",
+  "title": "Chase Bliss Blooper",
+  "price": 380,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Chase Bliss Audio Blooper",
+  "ref": 385,
+  "n": 10,
+  "pct": 99
  },
  {
   "id": "3479528341",
@@ -420,6 +1164,66 @@
   "pct": 99
  },
  {
+  "id": "3484581357",
+  "href": "/s-anzeige/keeley-muse-driver/3484581357-74-1986",
+  "title": "Keeley Muse Driver",
+  "price": 200,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Keeley Keeley Muse Driver Pedal",
+  "ref": 202,
+  "n": 4,
+  "pct": 99
+ },
+ {
+  "id": "3459341107",
+  "href": "/s-anzeige/noise-engineering-mimetic-digitalis-eurorack-modul/3459341107-74-3354",
+  "title": "Noise Engineering - Mimetic Digitalis Eurorack Modul",
+  "price": 225,
+  "vb": true,
+  "cat": "modular",
+  "match": "Noise Engineering Mimetic Digitalis",
+  "ref": 226,
+  "n": 9,
+  "pct": 100
+ },
+ {
+  "id": "3479096919",
+  "href": "/s-anzeige/chase-bliss-onward/3479096919-74-44",
+  "title": "Chase Bliss Onward",
+  "price": 385,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Chase Bliss Audio Onward",
+  "ref": 386,
+  "n": 2,
+  "pct": 100
+ },
+ {
+  "id": "3479198828",
+  "href": "/s-anzeige/chase-bliss-blooper-looper-pedal/3479198828-74-1923",
+  "title": "Chase Bliss Blooper Looper Pedal",
+  "price": 385,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Chase Bliss Audio Blooper",
+  "ref": 385,
+  "n": 10,
+  "pct": 100
+ },
+ {
+  "id": "3435136673",
+  "href": "/s-anzeige/meris-hedra-pedal/3435136673-74-3492",
+  "title": "Meris Hedra pedal",
+  "price": 250,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Meris Hedra",
+  "ref": 247,
+  "n": 2,
+  "pct": 101
+ },
+ {
   "id": "3471905379",
   "href": "/s-anzeige/sequential-prophet-rev2-8-voice-synthesizer-neuwertig/3471905379-74-2152",
   "title": "Sequential Prophet Rev2 – 8-Voice Synthesizer, neuwertig",
@@ -432,6 +1236,30 @@
   "pct": 103
  },
  {
+  "id": "3482710323",
+  "href": "/s-anzeige/make-noise-maths-2-funktionsgenerator-eurorack-neu-ovp/3482710323-74-8165",
+  "title": "Make Noise Maths 2 Funktionsgenerator Eurorack NEU OVP",
+  "price": 275,
+  "vb": false,
+  "cat": "modular",
+  "match": "Make Noise Maths - Black",
+  "ref": 267,
+  "n": 12,
+  "pct": 103
+ },
+ {
+  "id": "3470921538",
+  "href": "/s-anzeige/chase-bliss-audio-blooper-looper-top-zustand/3470921538-74-1870",
+  "title": "Chase Bliss Audio Blooper Looper – Top Zustand",
+  "price": 400,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Chase Bliss Audio Blooper",
+  "ref": 385,
+  "n": 10,
+  "pct": 104
+ },
+ {
   "id": "3479460214",
   "href": "/s-anzeige/neuwertig-line-6-helix-rack-control-ovp-cases/3479460214-74-3122",
   "title": "NEUWERTIG: Line 6 Helix Rack + Control OVP + Cases",
@@ -442,6 +1270,30 @@
   "ref": 1129,
   "n": 2,
   "pct": 106
+ },
+ {
+  "id": "3418628290",
+  "href": "/s-anzeige/qu-bit-nautilus/3418628290-172-4114",
+  "title": "Qu-Bit Nautilus",
+  "price": 400,
+  "vb": true,
+  "cat": "modular",
+  "match": "Qu-Bit Nautilus",
+  "ref": 361,
+  "n": 4,
+  "pct": 111
+ },
+ {
+  "id": "3466572085",
+  "href": "/s-anzeige/xaoc-devices-batumi-black-panel-/3466572085-74-2081",
+  "title": "XAOC Devices Batumi (Black Panel)",
+  "price": 220,
+  "vb": true,
+  "cat": "modular",
+  "match": "Xaoc Devices Batumi",
+  "ref": 197,
+  "n": 7,
+  "pct": 112
  },
  {
   "id": "3485282451",
@@ -468,6 +1320,30 @@
   "pct": 120
  },
  {
+  "id": "3483386293",
+  "href": "/s-anzeige/noise-engineering-clep-diaz-schwarz-sehr-guter-zustand/3483386293-74-2052",
+  "title": "Noise Engineering Clep Diaz / Schwarz / Sehr guter Zustand",
+  "price": 170,
+  "vb": false,
+  "cat": "modular",
+  "match": "Noise Engineering Clep Diaz",
+  "ref": 139,
+  "n": 4,
+  "pct": 122
+ },
+ {
+  "id": "2868099793",
+  "href": "/s-anzeige/keeley-muse-driver-mkiii-overdrive-neu-/2868099793-74-1925",
+  "title": "Keeley Muse Driver MKIII Overdrive NEU!",
+  "price": 249,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Keeley Keeley Muse Driver Pedal",
+  "ref": 202,
+  "n": 4,
+  "pct": 123
+ },
+ {
   "id": "3222581830",
   "href": "/s-anzeige/roland-system-100-synthesizer-top-zustand-rechnung/3222581830-74-9266",
   "title": "Roland System 100 Synthesizer Top Zustand.+Rechnung",
@@ -490,5 +1366,77 @@
   "ref": 951,
   "n": 2,
   "pct": 126
+ },
+ {
+  "id": "3484517793",
+  "href": "/s-anzeige/make-noise-dpo-complex-oscillator-schwarz-eurorack-doepfer/3484517793-74-17018",
+  "title": "Make Noise DPO Complex Oscillator Schwarz Eurorack Doepfer",
+  "price": 595,
+  "vb": false,
+  "cat": "modular",
+  "match": "Make Noise DPO Module",
+  "ref": 460,
+  "n": 2,
+  "pct": 129
+ },
+ {
+  "id": "3470172191",
+  "href": "/s-anzeige/noise-engineering-basimilus-iteritas-alter-wie-neu-/3470172191-74-16390",
+  "title": "Noise Engineering Basimilus Iteritas Alter (Wie NEU)",
+  "price": 369,
+  "vb": true,
+  "cat": "modular",
+  "match": "Noise Engineering Basimilus Iteritas",
+  "ref": 280,
+  "n": 9,
+  "pct": 132
+ },
+ {
+  "id": "3484765430",
+  "href": "/s-anzeige/noise-engineering-basimilus-iteritas-alter-eurorack-modul/3484765430-74-7615",
+  "title": "Noise Engineering BASIMILUS ITERITAS ALTER Eurorack-Modul",
+  "price": 370,
+  "vb": true,
+  "cat": "modular",
+  "match": "Noise Engineering Basimilus Iteritas",
+  "ref": 280,
+  "n": 9,
+  "pct": 132
+ },
+ {
+  "id": "3463669690",
+  "href": "/s-anzeige/xaoc-devices-batumi-poti-expander-lfo-eurorack-doepfer/3463669690-74-17018",
+  "title": "XAOC Devices Batumi + Poti Expander LFO Eurorack Doepfer",
+  "price": 280,
+  "vb": false,
+  "cat": "modular",
+  "match": "Xaoc Devices Batumi",
+  "ref": 197,
+  "n": 7,
+  "pct": 142
+ },
+ {
+  "id": "3484629372",
+  "href": "/s-anzeige/gfi-system-specular-tempus-reverb-delay-pedal/3484629372-172-5373",
+  "title": "GFI System Specular Tempus Reverb & Delay Pedal",
+  "price": 350,
+  "vb": true,
+  "cat": "pedal",
+  "match": "GFI System Specular Reverb",
+  "ref": 227,
+  "n": 8,
+  "pct": 154
+ },
+ {
+  "id": "3452403702",
+  "href": "/s-anzeige/noise-engineering-mimetic-digitalis/3452403702-74-3351",
+  "title": "Noise Engineering Mimetic Digitalis",
+  "price": 350,
+  "vb": false,
+  "cat": "modular",
+  "match": "Noise Engineering Mimetic Digitalis",
+  "ref": 226,
+  "n": 9,
+  "pct": 155
  }
 ]

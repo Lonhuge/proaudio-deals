@@ -43,9 +43,9 @@ Every row in the report says which benchmark it used.
 | Vintage / discontinued outboard | 62 matched | 56 | 5 |
 | Guitar pedals | 463 | ~70 | 6 |
 | Synthesizers | 383 | ~65 | 4 |
-| Modular / Eurorack | 363 | ~31 | 4 |
+| Modular / Eurorack | 363 | ~40 | 5 |
 
-**35 qualifying listings; 59 rows sit within the 25-120% slider range.**
+**37 qualifying listings; 61 rows sit within the 25-120% slider range.**
 
 ## Two reference sources
 
@@ -60,7 +60,7 @@ two condition-comparable listings; a single data point is not a market. Clones, 
 firmware ROMs and spares are rejected before the median is taken — the Mutable Instruments results
 are full of "Plaits clone" and "nanoRings" listings that would drag the reference down.
 
-Together the two sources price 166 of the 1,209 listings in the three newer categories. The rest is
+Together the two sources price 245 of the 1,209 listings in the three newer categories. The rest is
 **unpriced, not rejected** — products neither source lists.
 
 ## Matching
