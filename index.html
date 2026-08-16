@@ -241,9 +241,8 @@
     <h2>Browse by discount <span class="count">— move the threshold</span></h2>
     <p class="note">Your 60% rule is the default. Drag it up to see what a looser cutoff would let in, or down to find only the outliers. Percentages are against new price for current gear and against the used market for discontinued gear, so the two are not strictly comparable — the badge on each row says which.</p>
     <div class="caveat">
-      <span><b>Guitar pedals, synths and modular are scraped but produced no qualifier.</b> 1,209 priced listings were collected across the three categories. None reached 60% — and the reason is the reference price, not the scrape.</span>
-      <span>Thomann does not stock much of this world: Chase Bliss, Noise Engineering and Mutable Instruments return unrelated products, and Mutable is discontinued outright, leaving 953 of 1,066 distinct products without a price to measure against. Of what did match, most is a single dealer selling sealed stock at retail — scored at 94–133% of new, which is correct and disqualifying.</span>
-      <span>The listings and the scoring pipeline are published in the repository. Their filter chips stay disabled here until a reference source that actually covers boutique pedals and Eurorack is wired in.</span>
+      <span><b>Coverage of pedals, synths and modular is partial.</b> 1,209 priced listings were collected across the three categories, but only 111 could be matched to a reference price. Thomann does not stock much of this world — Chase Bliss, Noise Engineering and Mutable Instruments return unrelated products, and Mutable is discontinued outright.</span>
+      <span>So the nine qualifiers below are a floor, not a complete answer: there are almost certainly more bargains sitting in the unmatched remainder. Everything unmatched is listed in the repository rather than quietly dropped.</span>
     </div>
 
     <div class="controls">
@@ -486,10 +485,42 @@
     {item:"Behringer T1953", ask:185, nw:120, pct:154, seller:"dealer", ads:27, loc:"55252 Wiesbaden", vb:false, cat:"Tube preamp", group:"vintage", ref:"used", caveat:"above market"}
   ];
 
+  /* pedals / synths / modular — priced against Thomann new */
+  const newcats = [
+    {item:"Source Audio Neuro Hub v1", ask:50, nw:119, pct:42, seller:"Stefan", ads:7, loc:"53773 Hennef (Sieg)", vb:false,
+     cat:"MIDI hub", group:"pedal", ref:"new", href:"/s-anzeige/source-audio-neuro-hub-v1-midi-interface/3473757310-74-1697"},
+    {item:"TC Electronic Ditto Looper", ask:40, nw:83, pct:48, seller:"Nils Posch", ads:2, loc:"63071 Offenbach", vb:false,
+     cat:"Looper pedal", group:"pedal", ref:"new", caveat:"flagged: 2-ad seller", href:"/s-anzeige/tc-electronic-ditto-looper-effektpedal/3485830654-74-4523"},
+    {item:"TC Electronic Ditto Looper", ask:45, nw:83, pct:54, seller:"Denise", ads:40, loc:"64347 Griesheim", vb:true,
+     cat:"Looper pedal", group:"pedal", ref:"new", href:"/s-anzeige/tc-electronic-ditto-looper-gitarren-effektpedal/3483802032-74-4501"},
+    {item:"TC Electronic Ditto Looper", ask:45, nw:83, pct:54, seller:"RN", ads:5, loc:"65604 Elz", vb:false,
+     cat:"Looper pedal", group:"pedal", ref:"new", href:"/s-anzeige/tc-electronic-ditto-looper-pedal-gitarre-effekt-neuwertig-/3484029539-74-4373"},
+    {item:"Clavia Nord Lead A1", ask:900, nw:1589, pct:57, seller:"Jan Wächtler", ads:2, loc:"09131 Chemnitz", vb:false,
+     cat:"Synthesizer", group:"synth", ref:"new", caveat:"flagged: 2-ad seller", href:"/s-anzeige/clavia-nord-lead-a1-synthesizer/3483035116-74-3883"},
+    {item:"Neural DSP Quad Cortex", ask:1000, nw:1669, pct:60, seller:"Alexander", ads:2, loc:"60313 Frankfurt am Main", vb:true,
+     cat:"Modeller / multi-FX", group:"pedal", ref:"new", caveat:"flagged: 2-ad seller", href:"/s-anzeige/neural-dsp-quad-cortex-modeler-ovp-neuwertig/3442120018-74-4300"},
+    {item:"Befaco Burst", ask:105, nw:175, pct:60, seller:"Michael B.", ads:2, loc:"45711 Datteln", vb:false,
+     cat:"Eurorack burst generator", group:"modular", ref:"new", caveat:"flagged: 2-ad seller", href:"/s-anzeige/befaco-burst/3473786756-74-1329"},
+    {item:"TC Electronic Ditto Looper", ask:50, nw:83, pct:60, seller:"Robin M.", ads:2, loc:"64285 Darmstadt", vb:true,
+     cat:"Looper pedal", group:"pedal", ref:"new", caveat:"flagged: 2-ad seller", href:"/s-anzeige/tc-electronic-ditto-looper-gitarren-effektpedal/3484440562-74-4895"},
+    {item:"Doepfer A-162 Dual Trigger Delay", ask:45, nw:75, pct:60, seller:"Leon_L", ads:9, loc:"60389 Frankfurt am Main", vb:false,
+     cat:"Eurorack trigger delay", group:"modular", ref:"new", href:"/s-anzeige/doepfer-a-162-dual-trigger-delay-eurorack-modul/3485896463-74-16298"},
+
+    {item:"Clavia Nord Lead A1", ask:965, nw:1589, pct:61, seller:"dealer", ads:109, loc:"66386 St. Ingbert", vb:false,
+     cat:"Synthesizer", group:"synth", ref:"new", href:"/s-anzeige/clavia-nord-lead-a1-synthesizer-rechn-2j-gewaehr-/3455465091-74-303"},
+    {item:"Behringer TD-3-SR", ask:60, nw:99, pct:61, seller:"Phil Waschi", ads:11, loc:"67294 Gauersheim", vb:false,
+     cat:"Bass line synth", group:"synth", ref:"new", href:"/s-anzeige/behringer-td-3-sr-analog-bass-line-synthesizer-ovp/3476897330-74-19825"},
+    {item:"Moog Mother-32", ask:350, nw:575, pct:61, seller:"Mario", ads:4, loc:"93053 Regensburg", vb:true,
+     cat:"Semi-modular synth", group:"synth", ref:"new", href:"/s-anzeige/moog-mother-32-semi-modular-analog-synthesizer-mit-ovp/3479324365-74-7656"},
+    {item:"Eventide TimeFactor", ask:250, nw:399, pct:63, seller:"Alexander", ads:9, loc:"12045 Berlin-Neukölln", vb:false,
+     cat:"Delay pedal", group:"pedal", ref:"new", href:"/s-anzeige/pedal-eventide-timefactor/3278670910-74-3397"}
+  ];
+
   const ALL = [
     ...deals.map(d => ({...d, group:"outboard", ref:"new"})),
     ...vintage.map(d => ({...d, group:"vintage", ref:"used"})),
-    ...more
+    ...more,
+    ...newcats
   ].sort((a, b) => a.pct - b.pct);
 
   const GROUPS = [

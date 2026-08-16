@@ -46,6 +46,11 @@ def parse_price(p):
 ACC = re.compile(r"\b(case|bag|cover|decksaver|stand|strap|adaptor|adapter|power supply|psu|"
                  r"bracket|overlay|plugin|cloud|expander kit|softcase|flyht|thon|udg|rockboard|b-stock|b stock)\b", re.I)
 
+# an ad whose subject is a case/cover/PSU, in either language
+AD_ACC = re.compile(r"\b(case|gigcase|gigbag|hardshell|tasche|koffer|protector|cover|hulle|hülle|"
+                    r"bag|decksaver|staubschutz|dustcover|netzteil|power supply|psu|rack ?ears|"
+                    r"bracket|brackets|halterung|stand)\b", re.I)
+
 # words that carry no identifying weight when deciding "same product"
 FILLER = set("""audio pedal pedals effects designs instruments machines electronic electronics
 sound synth synthesizer keyboard guitar bass module modul eurorack processor reverb delay
@@ -65,10 +70,14 @@ def best_match(ad_title, hits):
     at = ident(ad_title)
     if not at:
         return None
+    ad_is_acc = bool(AD_ACC.search(ad_title))
     best, best_len = None, -1
     for h in hits:
         name, price = h.get("name"), parse_price(h.get("price"))
         if not name or not price or ACC.search(name):
+            continue
+        # an ad selling a case must never be priced against the instrument itself
+        if ad_is_acc and not AD_ACC.search(name):
             continue
         nt = ident(name)
         if len(nt) < 2 or not nt <= at:      # every product identifier must appear in the ad

@@ -37,23 +37,20 @@ Every row in the report says which benchmark it used.
 
 ## Coverage
 
-| Category | Ads scraped | Status |
-|---|---|---|
-| Compressors, EQs, preamps, effects, mics | 696 | complete — 15 qualifying listings |
-| Vintage / discontinued outboard | 62 matched | complete — 5 qualifying |
-| Guitar pedals | 463 priced | scored, no qualifier yet |
-| Synthesizers | 383 priced | scored, no qualifier yet |
-| Modular / Eurorack | 363 priced | reference prices largely unavailable |
+| Category | Ads priced | Matched to a reference | Qualifying |
+|---|---|---|---|
+| Compressors, EQs, preamps, effects, mics | 696 scraped | 114 | 15 |
+| Vintage / discontinued outboard | 62 matched | 56 | 5 |
+| Guitar pedals | 463 | 64 | 6 |
+| Synthesizers | 383 | 32 | 1 |
+| Modular / Eurorack | 363 | 15 | 2 |
 
-The three newer categories are scraped and priced (`data/search_priced.json`, 1,209 ads with
-asking prices). What limits them is the *reference* side, not the scrape:
-
-- **Thomann does not stock much of it.** Chase Bliss, Noise Engineering and Mutable Instruments
-  return unrelated products; Mutable is discontinued outright. 953 of 1,066 distinct products
-  still need a reference price.
-- **Much of what did match is retail, not resale.** A single dealer accounts for a large share of
-  the pedal listings, selling sealed stock at or above Thomann's price — correctly scored at
-  94–133% and correctly excluded.
+The nine qualifiers in the three newer categories are a **floor, not a complete answer**. Only 111
+of 1,209 priced listings could be matched to a reference price, because Thomann does not stock much
+of this world: Chase Bliss, Noise Engineering and Mutable Instruments return unrelated products, and
+Mutable is discontinued outright. The unmatched remainder is kept in `data/search_priced.json`
+rather than dropped — wiring in a source that covers boutique pedals and Eurorack (Reverb's EU
+listings, ModularGrid) would score it without rescraping.
 
 ## Matching
 
