@@ -40,11 +40,11 @@ Every row in the report says which benchmark it used.
 | | |
 |---|---|
 | Ads scraped (all searches paged to exhaustion) | **7,833** |
-| Priced against a reference | **902** |
-| Past the seller filter | **246** |
-| Qualifying at ≤60% | **102** |
+| Priced against a reference | **931** |
+| Past the seller filter | **252** |
+| Qualifying at ≤60% | **105** |
 
-Guitar pedals 95 · Modular 49 · Synths 41 · Outboard 37 · Vintage 24.
+Guitar pedals 95 · Modular 55 · Synths 41 · Outboard 37 · Vintage 24.
 
 ## Three reference sources
 

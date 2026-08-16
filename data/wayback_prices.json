@@ -273,5 +273,165 @@
   "slug": "mutable-instruments-blades",
   "price": 307,
   "snapshot": "20210226"
+ },
+ "mutable blinds": {
+  "slug": "mutable-instruments-blinds",
+  "price": 174,
+  "snapshot": "20200927"
+ },
+ "mutable braids": {
+  "slug": "mutable-instruments-braids",
+  "price": 340,
+  "snapshot": "20200920"
+ },
+ "elements mutable": {
+  "slug": "mutable-instruments-elements",
+  "price": 467,
+  "snapshot": "20200813"
+ },
+ "marbles mutable": {
+  "slug": "mutable-instruments-marbles",
+  "price": 291,
+  "snapshot": "20200918"
+ },
+ "plaits mutable plaits": {
+  "slug": "mutable-instruments-plaits",
+  "price": 223,
+  "snapshot": "20200922"
+ },
+ "ripples 2020 mutable": {
+  "slug": "mutable-instruments-ripples-2020",
+  "price": 164,
+  "snapshot": "20201001"
+ },
+ "shades mutable": {
+  "slug": "mutable-instruments-shades",
+  "price": 99,
+  "snapshot": "20210511"
+ },
+ "stages mutable": {
+  "slug": "mutable-instruments-stages",
+  "price": 291,
+  "snapshot": "20200930"
+ },
+ "mutable tides": {
+  "slug": "mutable-instruments-tides-2",
+  "price": 223,
+  "snapshot": "20200930"
+ },
+ "veils 2020 mutable": {
+  "slug": "mutable-instruments-veils-model-of-2020",
+  "price": 174,
+  "snapshot": "20201206"
+ },
+ "warps mutable": {
+  "slug": "mutable-instruments-warps",
+  "price": 223,
+  "snapshot": "20200813"
+ },
+ "noise engineering ataraxic": {
+  "slug": "noise-engineering-ataraxic-iteritas",
+  "price": 378,
+  "snapshot": "20200921"
+ },
+ "noise engineering basimilus": {
+  "slug": "noise-engineering-basimilus-iteritas-alter",
+  "price": 388,
+  "snapshot": "20200814"
+ },
+ "noise engineering bin": {
+  "slug": "noise-engineering-bin-seq",
+  "price": 125,
+  "snapshot": "20200922"
+ },
+ "noise engineering clep": {
+  "slug": "noise-engineering-clep-diaz",
+  "price": 125,
+  "snapshot": "20200922"
+ },
+ "noise engineering confundo": {
+  "slug": "noise-engineering-confundo-funkidos",
+  "price": 388,
+  "snapshot": "20250404"
+ },
+ "noise engineering cursus": {
+  "slug": "noise-engineering-cursus-iteritas",
+  "price": 378,
+  "snapshot": "20200811"
+ },
+ "noise engineering electus": {
+  "slug": "noise-engineering-electus-versio",
+  "price": 348,
+  "snapshot": "20220519"
+ },
+ "horologic solum noise": {
+  "slug": "noise-engineering-horologic-solum",
+  "price": 153,
+  "snapshot": "20210128"
+ },
+ "noise engineering jam": {
+  "slug": "noise-engineering-jam-jam-black",
+  "price": 269,
+  "snapshot": "20230223"
+ },
+ "noise engineering kith": {
+  "slug": "noise-engineering-kith-ruina",
+  "price": 138,
+  "snapshot": "20201029"
+ },
+ "noise engineering manis": {
+  "slug": "noise-engineering-manis-iteritas",
+  "price": 378,
+  "snapshot": "20200805"
+ },
+ "noise engineering mimetic": {
+  "slug": "noise-engineering-mimetic-digitalis",
+  "price": 288,
+  "snapshot": "20200925"
+ },
+ "noise engineering numeric": {
+  "slug": "noise-engineering-numeric-repetitor",
+  "price": 242,
+  "snapshot": "20201001"
+ },
+ "noise engineering pura": {
+  "slug": "noise-engineering-pura-ruina",
+  "price": 193,
+  "snapshot": "20200926"
+ },
+ "noise engineering quantus": {
+  "slug": "noise-engineering-quantus-pax",
+  "price": 252,
+  "snapshot": "20200925"
+ },
+ "noise engineering univer": {
+  "slug": "noise-engineering-univer-inter",
+  "price": 309,
+  "snapshot": "20231205"
+ },
+ "noise engineering variatic": {
+  "slug": "noise-engineering-variatic-sequent",
+  "price": 162,
+  "snapshot": "20200927"
+ },
+ "noise engineering vox": {
+  "slug": "noise-engineering-vox-digitalis",
+  "price": 171,
+  "snapshot": "20200929"
+ },
+ "noise engineering xer": {
+  "slug": "noise-engineering-xer-mixa-black",
+  "price": 1129,
+  "snapshot": "20231205"
+ },
+ "pittsburgh modular lifeforms": {
+  "slug": "pittsburgh-modular-lifeforms-adsr",
+  "price": 96,
+  "snapshot": "20200927"
+ },
+ "qu-bit electronix bloom": {
+  "slug": "qu-bit-electronix-bloom",
+  "price": 349,
+  "snapshot": "20200927"
  }
 }
