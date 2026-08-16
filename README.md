@@ -45,7 +45,7 @@ Every row in the report says which benchmark it used.
 | Synthesizers | 383 | ~65 | 4 |
 | Modular / Eurorack | 363 | ~40 | 5 |
 
-**37 qualifying listings; 62 rows sit within the 25-120% slider range.**
+**37 qualifying listings; 87 rows sit within the 25-120% slider range.**
 
 ## Two reference sources
 
