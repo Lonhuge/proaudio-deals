@@ -231,7 +231,11 @@
   <section>
     <h2>Browse by discount <span class="count">— move the threshold</span></h2>
     <p class="note">Your 60% rule is the default. Drag it up to see what a looser cutoff would let in, or down to find only the outliers. Percentages are against new price for current gear and against the used market for discontinued gear, so the two are not strictly comparable — the badge on each row says which.</p>
-    <div class="caveat"><span><b>Guitar pedals, synths and modular are not populated yet.</b> Those three categories were scraped — 940 ads, 802 after filtering — but the run requested detail pages too aggressively and Kleinanzeigen temporarily blocked the IP range, taking the partial results with it. Their filter chips are disabled below until the scan is rerun at a slower request rate.</span></div>
+    <div class="caveat">
+      <span><b>Guitar pedals, synths and modular are scraped but produced no qualifier.</b> 1,209 priced listings were collected across the three categories. None reached 60% — and the reason is the reference price, not the scrape.</span>
+      <span>Thomann does not stock much of this world: Chase Bliss, Noise Engineering and Mutable Instruments return unrelated products, and Mutable is discontinued outright, leaving 953 of 1,066 distinct products without a price to measure against. Of what did match, most is a single dealer selling sealed stock at retail — scored at 94–133% of new, which is correct and disqualifying.</span>
+      <span>The listings and the scoring pipeline are published in the repository. Their filter chips stay disabled here until a reference source that actually covers boutique pedals and Eurorack is wired in.</span>
+    </div>
 
     <div class="controls">
       <div class="ctl-head">
