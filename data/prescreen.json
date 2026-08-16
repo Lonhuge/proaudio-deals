@@ -77,6 +77,17 @@
   "pct": 58
  },
  {
+  "id": "3461113954",
+  "href": "/s-anzeige/befaco-vc-adsr-analoger-huellkurvengenerator-inkl-ovp/3461113954-74-4238",
+  "title": "Befaco VC ADSR - analoger Hüllkurvengenerator inkl. OVP",
+  "price": 105,
+  "vb": false,
+  "cat": "modular",
+  "match": "Befaco VC ADSR",
+  "ref": 179,
+  "pct": 59
+ },
+ {
   "id": "3442120018",
   "href": "/s-anzeige/neural-dsp-quad-cortex-modeler-ovp-neuwertig/3442120018-74-4300",
   "title": "Neural DSP Quad Cortex Modeler OVP Neuwertig",
@@ -319,6 +330,17 @@
   "pct": 70
  },
  {
+  "id": "3449262447",
+  "href": "/s-anzeige/befaco-cv-thing-eurorack-modul-cv-zu-midi-interface/3449262447-74-1838",
+  "title": "Befaco CV Thing Eurorack Modul - CV zu MIDI Interface",
+  "price": 175,
+  "vb": true,
+  "cat": "modular",
+  "match": "Befaco CV Thing",
+  "ref": 249,
+  "pct": 70
+ },
+ {
   "id": "3469500496",
   "href": "/s-anzeige/intellijel-scales-eurorack-quantizer-top-zustand/3469500496-74-3494",
   "title": "Intellijel Scales Eurorack Quantizer Top Zustand",
@@ -339,6 +361,17 @@
   "match": "Keeley Compressor Mini",
   "ref": 129,
   "pct": 70
+ },
+ {
+  "id": "3455431770",
+  "href": "/s-anzeige/dreadbox-darkness-hall-effekt-pedal/3455431770-74-3826",
+  "title": "Dreadbox Darkness Hall Effekt Pedal",
+  "price": 180,
+  "vb": true,
+  "cat": "synth",
+  "match": "Dreadbox Darkness",
+  "ref": 255,
+  "pct": 71
  },
  {
   "id": "3459547241",
@@ -382,6 +415,28 @@
   "cat": "pedal",
   "match": "Meris Mercury 7 Reverb Pedal",
   "ref": 349,
+  "pct": 72
+ },
+ {
+  "id": "3350677138",
+  "href": "/s-anzeige/xaoc-devices-sofia-eurorack-modul-neuw-mit-rechnung/3350677138-74-1061",
+  "title": "XAOC Devices Sofia Eurorack-Modul neuw. mit Rechnung",
+  "price": 350,
+  "vb": false,
+  "cat": "modular",
+  "match": "XAOC Devices Sofia",
+  "ref": 489,
+  "pct": 72
+ },
+ {
+  "id": "3366793252",
+  "href": "/s-anzeige/frap-tools-usta-sequencer-eurorack-modul-in-ovp/3366793252-74-9224",
+  "title": "Frap Tools USTA Sequencer Eurorack Modul in OVP",
+  "price": 540,
+  "vb": false,
+  "cat": "modular",
+  "match": "Frap Tools USTA",
+  "ref": 749,
   "pct": 72
  },
  {
@@ -460,6 +515,28 @@
   "match": "Novation Launchkey 49 MK4",
   "ref": 219,
   "pct": 73
+ },
+ {
+  "id": "3462970424",
+  "href": "/s-anzeige/sequential-prophet-6/3462970424-74-16354",
+  "title": "Sequential Prophet 6",
+  "price": 2550,
+  "vb": false,
+  "cat": "synth",
+  "match": "Sequential Prophet 6",
+  "ref": 3429,
+  "pct": 74
+ },
+ {
+  "id": "3464915592",
+  "href": "/s-anzeige/oberheim-teo-5-analog-synthesizer-keyboard-synth/3464915592-74-3477",
+  "title": "Oberheim TEO-5 Analog Synthesizer Keyboard Synth",
+  "price": 1060,
+  "vb": false,
+  "cat": "synth",
+  "match": "Oberheim TEO-5",
+  "ref": 1439,
+  "pct": 74
  },
  {
   "id": "3479172899",
@@ -715,6 +792,17 @@
   "pct": 80
  },
  {
+  "id": "3433782158",
+  "href": "/s-anzeige/eventide-ultratap-effektpedal-mit-ovp/3433782158-74-9629",
+  "title": "Eventide Ultratap Effektpedal mit OVP",
+  "price": 160,
+  "vb": false,
+  "cat": "pedal",
+  "match": "Eventide UltraTap",
+  "ref": 199,
+  "pct": 80
+ },
+ {
   "id": "3444811404",
   "href": "/s-anzeige/empress-effects-heavy-menace-gitarren-verzerrer-noisegate-ovp/3444811404-74-7349",
   "title": "Empress Effects Heavy Menace Gitarren Verzerrer & NoiseGate OVP",
@@ -748,6 +836,17 @@
   "pct": 81
  },
  {
+  "id": "3459647075",
+  "href": "/s-anzeige/roland-jupiter-x-synthesizer-neuwertig-rechn-2j-gewaehr-/3459647075-74-303",
+  "title": "Roland Jupiter-X Synthesizer NEUwertig + Rechn./2J. GEWÄHR!",
+  "price": 1899,
+  "vb": false,
+  "cat": "synth",
+  "match": "Roland Jupiter-X",
+  "ref": 2349,
+  "pct": 81
+ },
+ {
   "id": "3480681751",
   "href": "/s-anzeige/mxr-phase-90-phaser-effektpedal/3480681751-74-959",
   "title": "MXR Phase 90 Phaser Effektpedal",
@@ -757,6 +856,17 @@
   "match": "MXR Phase 90",
   "ref": 93,
   "pct": 81
+ },
+ {
+  "id": "3460024854",
+  "href": "/s-anzeige/eurorack-xaoc-devices-sofia-oscillator/3460024854-74-6682",
+  "title": "Eurorack XAOC Devices Sofia Oscillator",
+  "price": 399,
+  "vb": false,
+  "cat": "modular",
+  "match": "XAOC Devices Sofia",
+  "ref": 489,
+  "pct": 82
  },
  {
   "id": "3484771451",
@@ -812,6 +922,28 @@
   "match": "Dreadbox Typhon",
   "ref": 385,
   "pct": 83
+ },
+ {
+  "id": "3443188708",
+  "href": "/s-anzeige/empress-zoia-multi-effects-pedal-/3443188708-172-26761",
+  "title": "Empress Zoia Multi-Effects Pedal ",
+  "price": 450,
+  "vb": true,
+  "cat": "pedal",
+  "match": "Empress Effects ZOIA",
+  "ref": 535,
+  "pct": 84
+ },
+ {
+  "id": "3447128029",
+  "href": "/s-anzeige/waldorf-iridium-synthesizer-ovp-2-j-gewaehrleistung/3447128029-74-1455",
+  "title": "Waldorf Iridium - Synthesizer + OVP + 2 J. Gewährleistung",
+  "price": 2150,
+  "vb": false,
+  "cat": "synth",
+  "match": "Waldorf Iridium Keyboard",
+  "ref": 2559,
+  "pct": 84
  },
  {
   "id": "3462541106",
@@ -877,6 +1009,17 @@
   "cat": "modular",
   "match": "Tiptop Audio Z5000 Black",
   "ref": 209,
+  "pct": 86
+ },
+ {
+  "id": "3457252194",
+  "href": "/s-anzeige/expert-sleepers-fhx-8cv-cv-expander-fuer-fh-2/3457252194-74-9281",
+  "title": "Expert Sleepers FHX-8CV – CV-Expander für FH-2",
+  "price": 125,
+  "vb": true,
+  "cat": "modular",
+  "match": "Expert Sleepers FHX-8CV",
+  "ref": 145,
   "pct": 86
  },
  {
@@ -1053,6 +1196,17 @@
   "cat": "pedal",
   "match": "JHS Pedals 424 Gain Stage",
   "ref": 259,
+  "pct": 98
+ },
+ {
+  "id": "3436993712",
+  "href": "/s-anzeige/jhs-pedals-unicorn-v2-pedal-neu-/3436993712-74-1925",
+  "title": "JHS Pedals Unicorn V2 Pedal NEU!",
+  "price": 219,
+  "vb": false,
+  "cat": "pedal",
+  "match": "JHS Pedals Unicorn V2",
+  "ref": 223,
   "pct": 98
  },
  {
