@@ -55,21 +55,29 @@ boutique pedals where neither source has two comparable listings, and a referenc
 point is a guess. They are kept in `data/ads_v2.json` so a third source (ModularGrid) could score
 them without rescraping.
 
-## Two reference sources
+## Three reference sources
 
-`scraper/score.py` prices against **Thomann** (new price) for everything Thomann stocks.
-`scraper/score_reverb.py` prices the remainder against the **Reverb EU used market**, reached
-through Reverb's JSON API with an `X-Display-Currency: EUR` header — the HTML search pages render
-client-side and are an order of magnitude slower to scrape.
+| Source | Covers | Benchmark |
+|---|---|---|
+| **Thomann** | mainstream stock | current **new** price |
+| **Reverb** (JSON API, `X-Display-Currency: EUR`) | discontinued & boutique | **used** market median |
+| **SchneidersLaden** | Eurorack | current **new** price |
 
-Reverb rows are labelled **used**, not **new**, and the two are not interchangeable: 60% of the
-used market is a harder discount than 60% of new. A Reverb reference is the **median** of at least
-two condition-comparable listings; a single data point is not a market. Clones, cases, DIY kits,
-firmware ROMs and spares are rejected before the median is taken — the Mutable Instruments results
-are full of "Plaits clone" and "nanoRings" listings that would drag the reference down.
+SchneidersLaden is the Berlin modular shop, and it prices the Eurorack that the other two miss
+entirely — Reverb returns clones for Mutable Instruments, Thomann does not stock Make Noise, Erica
+or Xaoc at all. Product identity comes from the **URL slug**, not the display name: the shop shows
+"Maths 2 (Silver)" while the slug reads `make-noise-maths-2-silver` and carries the manufacturer.
 
-Together the two sources price 245 of the 1,209 listings in the three newer categories. The rest is
-**unpriced, not rejected** — products neither source lists.
+Two locale traps live here. SchneidersLaden's English pages write €390.00 with a period as the
+*decimal* separator, so stripping periods (correct for German 1.234,00) multiplies every price by
+100. Reverb writes €9,999 with a comma as the *thousands* separator. Both parsers now detect the
+format instead of assuming one.
+
+`scraper/wb2.py` recovers prices for discontinued modules from **archived SchneidersLaden product
+pages** via the Wayback Machine. It resolves exact snapshot timestamps from the CDX index —
+`/web/<year>/<url>` silently returns a placeholder page when no snapshot is near, which yields no
+price and looks like a miss. archive.org rate-limits hard: requests are serial with a 4 s delay and
+three retries, and even then it intermittently refuses connections.
 
 ## Matching
 
