@@ -1,0 +1,552 @@
+<title>Outboard Under Sixty</title>
+<style>
+  :root {
+    --bg:#e9ecec; --surface:#fbfcfc; --surface-2:#f1f4f4;
+    --ink:#101617; --ink-2:#3d4a4c; --muted:#697779;
+    --line:#ccd5d5; --line-soft:#dde4e4;
+    --accent:#0d6a70; --accent-soft:#d3e6e6;
+    --good:#1f6b4a; --good-soft:#d5e9de;
+    --warn:#8a5a06; --warn-soft:#f2e5cb;
+    --dim:#7b8688;
+    --shadow:0 1px 2px rgba(16,22,23,.06), 0 6px 18px rgba(16,22,23,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:#0e1213; --surface:#161c1d; --surface-2:#1c2426;
+      --ink:#e8eeee; --ink-2:#b6c3c4; --muted:#8b9a9c;
+      --line:#2a3436; --line-soft:#222b2d;
+      --accent:#54c9ca; --accent-soft:#12302f;
+      --good:#63c795; --good-soft:#122c21;
+      --warn:#d9a441; --warn-soft:#2e2513;
+      --dim:#78878a;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 20px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:#0e1213; --surface:#161c1d; --surface-2:#1c2426;
+    --ink:#e8eeee; --ink-2:#b6c3c4; --muted:#8b9a9c;
+    --line:#2a3436; --line-soft:#222b2d;
+    --accent:#54c9ca; --accent-soft:#12302f;
+    --good:#63c795; --good-soft:#122c21;
+    --warn:#d9a441; --warn-soft:#2e2513;
+    --dim:#78878a;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 20px rgba(0,0,0,.3);
+  }
+
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Avenir Next","Segoe UI Variable Text",system-ui,-apple-system,sans-serif;
+    font-size:15px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono { font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-variant-numeric:tabular-nums; }
+  .wrap { max-width:1080px; margin:0 auto; padding:40px 24px 80px; display:flex; flex-direction:column; gap:40px; }
+
+  /* ---- header ---- */
+  header { display:flex; flex-direction:column; gap:18px; }
+  .eyebrow {
+    font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--accent); font-weight:600;
+  }
+  h1 {
+    margin:0; font-size:clamp(30px,5vw,44px); line-height:1.08;
+    letter-spacing:-.025em; font-weight:700; text-wrap:balance;
+  }
+  .lede { margin:0; max-width:64ch; color:var(--ink-2); font-size:16px; }
+
+  .criteria {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:1px;
+    background:var(--line-soft); border:1px solid var(--line-soft);
+    border-radius:4px; overflow:hidden;
+  }
+  .crit { background:var(--surface); padding:13px 15px; display:flex; flex-direction:column; gap:3px; }
+  .crit dt { font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+  .crit dd { margin:0; font-size:14px; color:var(--ink); font-weight:600; }
+
+  .funnel {
+    display:flex; flex-wrap:wrap; align-items:center; gap:8px;
+    font-size:13px; color:var(--muted);
+  }
+  .funnel b { color:var(--ink); font-weight:700; }
+  .funnel .arrow { color:var(--dim); }
+
+  /* ---- sections ---- */
+  section { display:flex; flex-direction:column; gap:16px; }
+  h2 {
+    margin:0; font-size:12px; letter-spacing:.15em; text-transform:uppercase;
+    font-weight:700; color:var(--muted);
+    padding-bottom:9px; border-bottom:1px solid var(--line);
+  }
+  h2 span.count { color:var(--dim); font-weight:600; }
+  .note { margin:0; font-size:14px; color:var(--ink-2); max-width:70ch; }
+
+  /* ---- deal rows ---- */
+  .deals { display:flex; flex-direction:column; gap:8px; }
+  .deal {
+    display:grid;
+    grid-template-columns:38px minmax(0,1fr) 128px 168px;
+    gap:18px; align-items:center;
+    background:var(--surface); border:1px solid var(--line-soft);
+    border-radius:5px; padding:14px 16px; box-shadow:var(--shadow);
+  }
+  .rank { font-size:12px; font-weight:700; color:var(--dim); text-align:right; }
+
+  .who { display:flex; flex-direction:column; gap:4px; min-width:0; }
+  .item { font-size:16px; font-weight:700; letter-spacing:-.01em; }
+  .item a { color:inherit; text-decoration:none; }
+  .item a:hover { color:var(--accent); text-decoration:underline; }
+  .item a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
+  .meta { display:flex; flex-wrap:wrap; gap:6px 10px; font-size:12.5px; color:var(--muted); align-items:center; }
+  .chip {
+    display:inline-flex; align-items:center; gap:5px;
+    background:var(--surface-2); border:1px solid var(--line-soft);
+    border-radius:3px; padding:1px 7px; font-size:11.5px; color:var(--ink-2); font-weight:600;
+  }
+  .chip.flag { background:var(--warn-soft); border-color:transparent; color:var(--warn); }
+
+  .money { display:flex; flex-direction:column; gap:1px; text-align:right; }
+  .ask { font-size:17px; font-weight:700; letter-spacing:-.01em; }
+  .new { font-size:12px; color:var(--muted); }
+  .new s { text-decoration-thickness:1px; }
+
+  .pct { display:flex; flex-direction:column; gap:6px; }
+  .pctrow { display:flex; align-items:baseline; justify-content:space-between; gap:8px; }
+  .pctnum { font-size:19px; font-weight:700; letter-spacing:-.02em; color:var(--good); }
+  .pctlbl { font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--dim); font-weight:600; }
+  .meter { height:5px; border-radius:3px; background:var(--surface-2); overflow:hidden; border:1px solid var(--line-soft); }
+  .meter i { display:block; height:100%; background:var(--good); border-radius:3px 0 0 3px; }
+
+  /* ---- plain lists ---- */
+  .plain { display:flex; flex-direction:column; gap:1px; background:var(--line-soft);
+           border:1px solid var(--line-soft); border-radius:4px; overflow:hidden; }
+  .prow { background:var(--surface); padding:10px 14px; display:flex; flex-wrap:wrap;
+          gap:6px 12px; align-items:baseline; font-size:14px; }
+  .prow .pname { font-weight:650; }
+  .prow .psub { color:var(--muted); font-size:13px; }
+  .prow .ppct { margin-left:auto; color:var(--warn); font-weight:700; font-size:13px; }
+
+  /* ---- method ---- */
+  .method { display:flex; flex-direction:column; gap:10px; font-size:14px; color:var(--ink-2); }
+  .method ol { margin:0; padding-left:20px; display:flex; flex-direction:column; gap:7px; max-width:74ch; }
+  .method a { color:var(--accent); }
+  .caveat {
+    border-left:2px solid var(--warn); background:var(--warn-soft);
+    padding:12px 15px; border-radius:0 4px 4px 0; font-size:13.5px; color:var(--ink-2);
+    display:flex; flex-direction:column; gap:7px;
+  }
+  .caveat b { color:var(--ink); }
+
+  footer { font-size:12.5px; color:var(--dim); border-top:1px solid var(--line); padding-top:16px; }
+
+  /* ---- controls ---- */
+  .controls {
+    background:var(--surface); border:1px solid var(--line-soft); border-radius:5px;
+    padding:18px 20px; display:flex; flex-direction:column; gap:16px; box-shadow:var(--shadow);
+  }
+  .ctl-head { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:10px; }
+  .ctl-title { font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--muted); }
+  .ctl-val { font-size:15px; font-weight:700; }
+  .ctl-val b { color:var(--accent); font-size:21px; letter-spacing:-.02em; }
+  .ctl-count { font-size:13px; color:var(--muted); }
+  .ctl-count b { color:var(--ink); }
+
+  input[type=range] {
+    -webkit-appearance:none; appearance:none; width:100%; height:22px;
+    background:transparent; cursor:pointer; margin:0;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    height:6px; border-radius:3px;
+    background:linear-gradient(to right, var(--accent) 0 var(--fill,50%), var(--surface-2) var(--fill,50%) 100%);
+    border:1px solid var(--line-soft);
+  }
+  input[type=range]::-moz-range-track {
+    height:6px; border-radius:3px; background:var(--surface-2); border:1px solid var(--line-soft);
+  }
+  input[type=range]::-moz-range-progress { height:6px; border-radius:3px; background:var(--accent); }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance:none; appearance:none; width:20px; height:20px; margin-top:-8px;
+    border-radius:50%; background:var(--surface); border:2px solid var(--accent);
+    box-shadow:0 1px 3px rgba(0,0,0,.25);
+  }
+  input[type=range]::-moz-range-thumb {
+    width:18px; height:18px; border-radius:50%; background:var(--surface);
+    border:2px solid var(--accent); box-shadow:0 1px 3px rgba(0,0,0,.25);
+  }
+  input[type=range]:focus-visible::-webkit-slider-thumb { outline:2px solid var(--accent); outline-offset:2px; }
+  .ticks { display:flex; justify-content:space-between; font-size:10.5px; color:var(--dim); margin-top:-8px; }
+
+  .chips { display:flex; flex-wrap:wrap; gap:7px; }
+  .filter {
+    font:inherit; font-size:12.5px; font-weight:600; cursor:pointer;
+    background:var(--surface-2); color:var(--ink-2);
+    border:1px solid var(--line-soft); border-radius:3px; padding:5px 11px;
+  }
+  .filter[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:var(--surface); }
+  :root[data-theme="dark"] .filter[aria-pressed="true"],
+  .filter[aria-pressed="true"] { color:#fff; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .filter[aria-pressed="true"] { color:#08201f; }
+  }
+  :root[data-theme="dark"] .filter[aria-pressed="true"] { color:#08201f; }
+  .filter:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+  .empty { padding:22px; text-align:center; color:var(--muted); font-size:14px;
+           background:var(--surface); border:1px dashed var(--line); border-radius:5px; }
+
+  @media (max-width:760px) {
+    .deal { grid-template-columns:28px minmax(0,1fr); gap:6px 12px; }
+    .rank { text-align:left; }
+    .money { grid-column:2; text-align:left; flex-direction:row; align-items:baseline; gap:9px; }
+    .pct { grid-column:2; }
+    .pctrow { justify-content:flex-start; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Kleinanzeigen sweep — 16 August 2026</div>
+    <h1>Outboard under sixty</h1>
+    <p class="lede">Pro-audio outboard on Kleinanzeigen priced at 60% or less of what the same unit costs new today, after removing single-ad and unrated sellers. Every reference price below was looked up, not estimated — that check alone knocked out roughly half the apparent bargains. Discontinued and vintage gear has no new price, so it runs in a second pass measured against the used market.</p>
+
+    <dl class="criteria">
+      <div class="crit"><dt>Price rule</dt><dd>≤ 60% of new</dd></div>
+      <div class="crit"><dt>Seller with 1 ad</dt><dd>Excluded</dd></div>
+      <div class="crit"><dt>Seller with 2 ads</dt><dd>Flagged</dd></div>
+      <div class="crit"><dt>No rating badge</dt><dd>Excluded</dd></div>
+    </dl>
+
+    <div class="funnel mono">
+      <span><b>696</b> ads scraped</span><span class="arrow">→</span>
+      <span><b>316</b> in category</span><span class="arrow">→</span>
+      <span><b>176</b> identifiable models</span><span class="arrow">→</span>
+      <span><b>147</b> past seller filter</span><span class="arrow">→</span>
+      <span style="color:var(--good)"><b>15</b> under new</span>
+      <span class="arrow">+</span>
+      <span style="color:var(--good)"><b>5</b> under used</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Browse by discount <span class="count">— move the threshold</span></h2>
+    <p class="note">Your 60% rule is the default. Drag it up to see what a looser cutoff would let in, or down to find only the outliers. Percentages are against new price for current gear and against the used market for discontinued gear, so the two are not strictly comparable — the badge on each row says which.</p>
+
+    <div class="controls">
+      <div class="ctl-head">
+        <span class="ctl-title">Show listings at or below</span>
+        <span class="ctl-val"><b id="thVal">60</b>% of reference</span>
+      </div>
+      <input type="range" id="thresh" min="25" max="120" value="60" step="1"
+             aria-label="Maximum price as percentage of reference price">
+      <div class="ticks"><span>25%</span><span>50%</span><span>75%</span><span>100%</span><span>120%</span></div>
+      <div class="chips" id="chips"></div>
+      <div class="ctl-count"><b id="hitCount">0</b> <span id="hitWord">listings</span> shown</div>
+    </div>
+
+    <div class="deals" id="browse"></div>
+    <div class="empty" id="browseEmpty" hidden>Nothing at this threshold in the selected categories.</div>
+  </section>
+
+  <section>
+    <h2>Still in production <span class="count">— 15 listings at ≤60% of new</span></h2>
+    <div class="deals" id="deals"></div>
+  </section>
+
+  <section>
+    <h2>Vintage &amp; discontinued <span class="count">— 5 listings at ≤60% of the used market</span></h2>
+    <p class="note">These have no new price, so the benchmark changes: each is measured against comparable units currently listed on Reverb in euros, condition-matched where the listing allowed it. That is an <em>asking-price</em> reference, not a completed sale — eBay blocks automated access to its sold-listings archive, and Reverb's own sold-price guide is gated behind a per-model form. Real transaction prices tend to run below asking, so treat these percentages as the optimistic end.</p>
+    <div class="deals" id="vintage"></div>
+  </section>
+
+  <section>
+    <h2>Vintage: below market, but above the line <span class="count">— 60–75% of used</span></h2>
+    <p class="note">Same benchmark, softer discount. Two carry real risk that the percentage doesn't capture — noted on each.</p>
+    <div class="plain">
+      <div class="prow"><span class="pname">TL Audio PA 5001</span> <span class="psub mono">€250 vs ~€395 · Privat, 25 ads · Dortmund</span> <span class="ppct mono">63%</span></div>
+      <div class="prow"><span class="pname">Lexicon LXP-15</span> <span class="psub mono">€199 vs ~€310 · dealer, 266 ads · Backnang</span> <span class="ppct mono">64%</span></div>
+      <div class="prow"><span class="pname">Eventide H3000</span> <span class="psub mono">€1,800 vs ~€2,800 · Falke, 18 ads · Münchberg — sold untested, "Bastlerware"</span> <span class="ppct mono">64%</span></div>
+      <div class="prow"><span class="pname">Aphex 107 Tubessence</span> <span class="psub mono">€160 VB vs ~€235 · Privat, 2 ads · Schwandorf — flagged: 2-ad seller</span> <span class="ppct mono">68%</span></div>
+      <div class="prow"><span class="pname">API 500 VPR 10-slot rack</span> <span class="psub mono">€950 vs ~€1,400 · bibos, 4 ads · Dietramszell</span> <span class="ppct mono">68%</span></div>
+      <div class="prow"><span class="pname">Drawmer DS501 Powergate</span> <span class="psub mono">€239 VB vs ~€351 · Felix Lips, 30 ads · Wuppertal</span> <span class="ppct mono">68%</span></div>
+      <div class="prow"><span class="pname">Lexicon PCM81</span> <span class="psub mono">€690 vs ~€1,000 · dealer, 705 ads · Ellwangen — sticky case, function only basic-tested</span> <span class="ppct mono">69%</span></div>
+      <div class="prow"><span class="pname">Lexicon MPX1</span> <span class="psub mono">€200 vs ~€285 · dealer, 705 ads · Ellwangen</span> <span class="ppct mono">70%</span></div>
+      <div class="prow"><span class="pname">dbx 160A</span> <span class="psub mono">€330 VB vs ~€449 · Christoph, 11 ads · München</span> <span class="ppct mono">73%</span></div>
+      <div class="prow"><span class="pname">Lexicon 480L + LARC</span> <span class="psub mono">€3,800 vs ~€5,200 · David Küblböck, 4 ads · Freilassing — two units, V4.1, collection sale</span> <span class="ppct mono">73%</span></div>
+      <div class="prow"><span class="pname">Focusrite ISA 430 MkII</span> <span class="psub mono">€1,450 VB vs ~€1,995 · Heidl Peter, 7 ads · Köln</span> <span class="ppct mono">73%</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Vintage priced above the market <span class="count">— skip these</span></h2>
+    <p class="note">Listed so you don't chase them on reputation alone. Each is asking more than comparable units are currently listed for.</p>
+    <div class="plain">
+      <div class="prow"><span class="pname">Lexicon PCM92</span> <span class="psub mono">€1,350 VB · comparable listed at €833</span> <span class="ppct mono">162%</span></div>
+      <div class="prow"><span class="pname">Empirical Labs LilFreQ</span> <span class="psub mono">€2,000 VB · comparables €1,825–1,890</span> <span class="ppct mono">106%</span></div>
+      <div class="prow"><span class="pname">SSL XLogic Alpha Channel</span> <span class="psub mono">€625 · comparable €587</span> <span class="ppct mono">106%</span></div>
+      <div class="prow"><span class="pname">Neumann KM84</span> <span class="psub mono">€2,600 VB · comparables €1,700–2,500, median ~€2,100</span> <span class="ppct mono">124%</span></div>
+      <div class="prow"><span class="pname">AKG C414 B-XLII</span> <span class="psub mono">€900 · comparable €750 in Germany, free shipping</span> <span class="ppct mono">120%</span></div>
+      <div class="prow"><span class="pname">Focusrite Liquid Channel</span> <span class="psub mono">€1,880 VB · comparable €1,339</span> <span class="ppct mono">140%</span></div>
+      <div class="prow"><span class="pname">sE Electronics 4400a</span> <span class="psub mono">€410 · sells new from €304</span> <span class="ppct mono">135%</span></div>
+      <div class="prow"><span class="pname">Behringer T1953</span> <span class="psub mono">€185 · comparable €120</span> <span class="ppct mono">154%</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Near misses <span class="count">— current gear, close but over the line</span></h2>
+    <p class="note">Worth a look if you'd stretch the rule, or if you'd haggle. The Crane Song is the interesting one: it lands at 60.2%, but its reference price is a 2024 snapshot with no current German seller, so I couldn't confirm it either way.</p>
+    <div class="plain">
+      <div class="prow"><span class="pname">Crane Song Flamingo</span> <span class="psub mono">€1,800 vs €2,990 · Al! Stone, 9 ads · Albbruck</span> <span class="ppct mono">60.2% · unverified</span></div>
+      <div class="prow"><span class="pname">Golden Age Project Pre-73 MkIII</span> <span class="psub mono">€205 vs €335 (MkIV) · Johannes, 9 ads · Dresden</span> <span class="ppct mono">61%</span></div>
+      <div class="prow"><span class="pname">Manley Massive Passive</span> <span class="psub mono">€3,690 vs €5,998 · Tasten Teddy, 8 ads · Witten</span> <span class="ppct mono">62%</span></div>
+      <div class="prow"><span class="pname">Eventide Space</span> <span class="psub mono">€280 vs €449 · j_vp, 6 ads · Leipzig</span> <span class="ppct mono">62%</span></div>
+      <div class="prow"><span class="pname">dbx 286s</span> <span class="psub mono">€110 vs €174 · Privat, 18 ads · Bonn</span> <span class="ppct mono">63%</span></div>
+      <div class="prow"><span class="pname">Manley Reference Cardioid</span> <span class="psub mono">€2,230 vs €3,499 · R.E., 5 ads · Steinfurt</span> <span class="ppct mono">64%</span></div>
+      <div class="prow"><span class="pname">Millennia HV-3D (8-ch)</span> <span class="psub mono">€3,400 vs €5,299 · HP, 9 ads · München</span> <span class="ppct mono">64%</span></div>
+      <div class="prow"><span class="pname">Manley Voxbox</span> <span class="psub mono">€3,199 vs €4,999 · Martin Schnella, 7 ads · Osterode</span> <span class="ppct mono">64%</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Flagged: two-ad sellers <span class="count">— 7 listings, none qualified</span></h2>
+    <p class="note">These passed the seller filter but you asked to have them marked. All seven failed the price test anyway, so none reached the list above — recorded here so the flag is visible rather than silently dropped.</p>
+    <div class="plain">
+      <div class="prow"><span class="pname">Manley Voxbox</span> <span class="psub mono">€3,400 · Andreas Schneider · Bamberg</span> <span class="ppct mono">68%</span></div>
+      <div class="prow"><span class="pname">Warm Audio WA-8000</span> <span class="psub mono">€799 VB · Leon Deleu · Lörrach</span> <span class="ppct mono">75%</span></div>
+      <div class="prow"><span class="pname">Eventide Space</span> <span class="psub mono">€300 VB · Alex · Hamburg-Altona</span> <span class="ppct mono">67%</span></div>
+      <div class="prow"><span class="pname">Eventide Space</span> <span class="psub mono">€300 · rollof · Berlin-Hohenschönhausen</span> <span class="ppct mono">67%</span></div>
+      <div class="prow"><span class="pname">Eventide Space</span> <span class="psub mono">€330 · Frederic · Weil im Schönbuch</span> <span class="ppct mono">73%</span></div>
+      <div class="prow"><span class="pname">Shure SM7B</span> <span class="psub mono">€290 VB · El Lias · Bretten</span> <span class="ppct mono">73%</span></div>
+      <div class="prow"><span class="pname">Shure SM7B</span> <span class="psub mono">€250 · AntMit19! · Bad Sobernheim</span> <span class="ppct mono">63%</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What the seller filter removed <span class="count">— 29 listings across both passes</span></h2>
+    <p class="note"><b>19 excluded for having a single ad.</b> Kleinanzeigen hides the "N Anzeigen online" counter when a seller has exactly one listing; I confirmed each of these against the seller's own profile page rather than inferring it. Among them were otherwise strong prices — an Avalon VT-737 at €2,450, a Neumann TLM 103 at €480, a DW Fearn VT-1 at €2,800 and a Manley Reference Gold at €5,500 all died here.</p>
+    <p class="note"><b>10 excluded for having no rating badge.</b> These sellers had 2–7 ads but no satisfaction rating on their profile, meaning no completed buyer feedback. That cost an AKG C414 XLII at €699, a Drawmer 1978 at €720, and a Bricasti M7 at €3,500.</p>
+  </section>
+
+  <section>
+    <h2>How this was built</h2>
+    <div class="method">
+      <ol>
+        <li><b>Scrape.</b> 36 searches across Kleinanzeigen for compressors, EQs, preamps, effects and mics — generic German terms plus specific brands and model numbers — yielding 696 unique ads.</li>
+        <li><b>Filter to category.</b> Dropped non-audio noise that matched on brand names (Aston Martin DBX, Seymour Duncan SSL pickups, Manley engine parts, an "Elysia" cosplay outfit) and out-of-scope audio gear (interfaces, monitors, plugins, monitor controllers). 316 remained.</li>
+        <li><b>Split by availability.</b> 114 listings matched a model still sold new; 62 more matched a discontinued or vintage model. The two groups need different benchmarks, so they were priced separately.</li>
+        <li><b>Read every ad page</b> for the real asking price, the seller's live ad count, and their rating badges; then read all 145 unique seller profiles to confirm both independently. This also corrected several prices the search-results page had mangled — an SPL Channel One that looked like €2,850 is actually €850, and a Neumann KM 140 pair that parsed as €1,401,850 is €1,850.</li>
+        <li><b>Verify new prices</b> at <a href="https://www.thomann.de">Thomann</a> for stocked lines, and <a href="https://geizhals.de">Geizhals</a> for boutique brands Thomann doesn't carry (Manley, Tube-Tech LCA 2B, Chandler, Crane Song).</li>
+        <li><b>Verify used prices</b> against comparable units listed on <a href="https://reverb.com">Reverb</a> in euros, discarding parts, manuals and ROM chips, and preferring European sellers and matched conditions.</li>
+        <li><b>Re-check the finalists</b> — all 20 confirmed live, none marked reserved, at the prices shown.</li>
+      </ol>
+
+      <div class="caveat">
+        <span><b>Four things to know before you buy.</b></span>
+        <span><b>The Tube-Tech is one unit, not three.</b> Seller "Hofmann" has the same LCA 2B posted three times with identical text (ad IDs 3334885020, 3398151902, 3467162047). Listed once here.</span>
+        <span><b>The Elysia comparison crosses a generation.</b> The listed xpressor 500 is the discontinued original; €929 is its successor, the xpressor neo 500. Treat 53% as indicative rather than exact.</span>
+        <span><b>Ad count is not a trust score.</b> It filters out throwaway accounts, which is what you asked for, but a rating badge on Kleinanzeigen reflects completed transactions of any kind — it is not a guarantee on a €2,000 channel strip. Prices move and ads sell; verify before travelling.</span>
+        <span><b>The vintage benchmark is softer than the new-price one.</b> Used comparables are thin — the Drawmer MX30 rests on a single listing, and the SPL Channel One reference is the higher-spec Premium variant, so its 54% is probably flattering. Where a model had no usable comparable at all (Aurora Audio GT4-2, Drawmer LX20, dbx 376, Lexicon MPX500, Schoeps CMC), it was left out rather than guessed at.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mono">Scraped 16 August 2026 · prices in EUR incl. German VAT · "VB" marks a negotiable asking price</footer>
+</div>
+
+<script>
+  const deals = [
+    {item:"dbx 286s", ask:60, nw:174, pct:34, seller:"Privat", ads:4, loc:"38350 Helmstedt", vb:false,
+     id:"3484963612", href:"/s-anzeige/mikrofonverstaerker-dbx-286s/3484963612-172-14238", cat:"Preamp / channel strip"},
+    {item:"Shure SM7B", ask:150, nw:398, pct:38, seller:"Mario", ads:6, loc:"85049 Ingolstadt", vb:false,
+     id:"3483519353", href:"/s-anzeige/shure-sm7b/3483519353-172-7611", cat:"Microphone"},
+    {item:"Warm Audio WA-FT Fen-tone", ask:299, nw:669, pct:45, seller:"Martin Frydas", ads:3, loc:"37308 Heilbad Heiligenstadt", vb:false,
+     id:"3480307744", href:"/s-anzeige/warm-audio-wa-ft-fen-tone-ribbon-baendchen-mikrofon-ovp-/3480307744-74-3622", cat:"Ribbon microphone"},
+    {item:"Shure SM7B", ask:199, nw:398, pct:50, seller:"Yvonne", ads:4, loc:"25421 Pinneberg", vb:false,
+     id:"3484820193", href:"/s-anzeige/shure-sm7b-mikrofon-fuer-streaming-neuwertig/3484820193-225-786", cat:"Microphone"},
+    {item:"Avalon VT-737SP", ask:1999, nw:3999, pct:50, seller:"Christoph Siemons", ads:6, loc:"50933 Köln-Müngersdorf", vb:false,
+     id:"3480467888", href:"/s-anzeige/avalon-vt-737sp-channelstrip/3480467888-74-18672", cat:"Tube channel strip"},
+    {item:"Shure SM7B", ask:200, nw:398, pct:50, seller:"zainverkauft", ads:15, loc:"74889 Sinsheim", vb:true,
+     id:"3485253371", href:"/s-anzeige/shure-sm7b-neu-nur-einmal-ausgepackt/3485253371-168-8139", cat:"Microphone"},
+    {item:"Avalon VT-737SP", ask:2020, nw:3999, pct:51, seller:"R.E.", ads:5, loc:"48565 Steinfurt", vb:false,
+     id:"3445090322", href:"/s-anzeige/avalon-vt-737sp/3445090322-74-1294", cat:"Tube channel strip"},
+    {item:"Elysia xpressor 500", ask:490, nw:929, pct:53, seller:"Thor", ads:9, loc:"31832 Springe", vb:false,
+     id:"3482706873", href:"/s-anzeige/elysia-xpressor-500/3482706873-74-2915", cat:"500-series compressor", caveat:"vs. successor (neo 500)"},
+    {item:"Røde NT1-A set", ask:92, nw:169, pct:54, seller:"M.M", ads:3, loc:"63743 Aschaffenburg", vb:false,
+     id:"3484803027", href:"/s-anzeige/rode-nt1-a-studio-kondensatormikrofon-set/3484803027-172-7438", cat:"Condenser microphone"},
+    {item:"Avalon VT-737SP", ask:2199, nw:3999, pct:55, seller:"Thomas", ads:16, loc:"72202 Nagold", vb:false,
+     id:"3323366151", href:"/s-anzeige/avalon-vt-737sp-channel-strip/3323366151-74-8238", cat:"Tube channel strip"},
+    {item:"Drawmer 1968 MkII", ask:890, nw:1579, pct:56, seller:"Tobias S.", ads:7, loc:"50674 Köln-Altstadt", vb:false,
+     id:"3482126681", href:"/s-anzeige/drawmer-1968-mk-ii-2-kanal-stereo-roehrenkompressor-j-fet/3482126681-172-989", cat:"Tube compressor", caveat:"serviced Jan 2026"},
+    {item:"Avalon VT-737SP", ask:2290, nw:3999, pct:57, seller:"Paul M.", ads:5, loc:"72070 Tübingen", vb:true,
+     id:"3478102252", href:"/s-anzeige/avalon-vt-737-top-zustand-neue-roehren/3478102252-172-9093", cat:"Tube channel strip", caveat:"ex-broadcast, new tubes"},
+    {item:"Neumann TLM 49 set", ask:899, nw:1549, pct:58, seller:"Frank", ads:17, loc:"40764 Langenfeld", vb:false,
+     id:"3485391412", href:"/s-anzeige/neumann-tlm-49-set-top-zustand/3485391412-74-1863", cat:"Condenser microphone"},
+    {item:"Tube-Tech LCA 2B", ask:2600, nw:4444, pct:58, seller:"Hofmann", ads:26, loc:"94529 Aicha vorm Wald", vb:true,
+     id:"3334885020", href:"/s-anzeige/tube-tech-lca2b-high-end-dual-tube-compressor/3334885020-74-5802", cat:"Dual tube compressor", caveat:"posted 3× — one unit"},
+    {item:"AKG C414 XLII", ask:550, nw:916, pct:60, seller:"FairTech Hamburg", ads:16, loc:"22547 Hamburg-Lurup", vb:false,
+     id:"3479043138", href:"/s-anzeige/akg-c414-xlii-referenz-kondensatormikrofon/3479043138-74-9439", cat:"Condenser microphone"}
+  ];
+
+  const vintage = [
+    {item:"SPL GoldMike (2-ch tube preamp)", ask:259, nw:800, pct:32, seller:"Matthias", ads:18, loc:"13187 Berlin-Pankow", vb:false,
+     href:"/s-anzeige/spl-goldmike-mikrofonvorverstaerker/3482971624-74-3473", cat:"Tube preamp", caveat:"MK generation not stated"},
+    {item:"Drawmer MX30", ask:150, nw:444, pct:34, seller:"Matthias", ads:4, loc:"08491 Reimersgrün", vb:true,
+     href:"/s-anzeige/drawmer-mx30-dual-gated-compressor-limiter/3460965498-74-4172", cat:"Gated compressor / limiter", caveat:"one comparable only"},
+    {item:"SPL GoldMike MK1 (9844)", ask:349, nw:800, pct:44, seller:"Risch", ads:5, loc:"86825 Bad Wörishofen", vb:false,
+     href:"/s-anzeige/-top-zustand-spl-goldmike-mk1-roehren-preamp-model-9844/3469858178-172-7257", cat:"Tube preamp", caveat:"shipping included"},
+    {item:"Telefunken / TAB V376", ask:1599, nw:3100, pct:52, seller:"Fabian Falkenstein", ads:21, loc:"33617 Bielefeld", vb:false,
+     href:"/s-anzeige/kultrumm-v376-tab-telefunken-mikrofonvorverstaerker-mic-preamp/3412217481-74-1059", cat:"Vintage mic preamp"},
+    {item:"SPL Channel One MK2 (2950)", ask:850, nw:1575, pct:54, seller:"Daniela Dietz", ads:2, loc:"60528 Frankfurt-Niederrad", vb:false,
+     href:"/s-anzeige/spl-channel-one-mk2-model-2950-channelstrip-roehren-preamp/3485310019-74-4321", cat:"Tube channel strip", caveat:"flagged: 2-ad seller"}
+  ];
+
+  const eur = n => "€" + n.toLocaleString("de-DE");
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+  const render = (rows, el, refLabel) => {
+    document.getElementById(el).innerHTML = rows.map((d, i) => `
+    <article class="deal">
+      <div class="rank mono">${i + 1}</div>
+      <div class="who">
+        <div class="item"><a href="https://www.kleinanzeigen.de${esc(d.href)}" target="_blank" rel="noopener">${esc(d.item)}</a></div>
+        <div class="meta">
+          <span>${esc(d.cat)}</span>
+          <span class="chip">${esc(d.seller)} · ${d.ads} ads</span>
+          <span class="mono">${esc(d.loc)}</span>
+          ${d.caveat ? `<span class="chip flag">${esc(d.caveat)}</span>` : ""}
+        </div>
+      </div>
+      <div class="money">
+        <div class="ask mono">${eur(d.ask)}${d.vb ? " VB" : ""}</div>
+        <div class="new mono">${refLabel} <s>${eur(d.nw)}</s></div>
+      </div>
+      <div class="pct">
+        <div class="pctrow">
+          <span class="pctnum mono">${d.pct}%</span>
+          <span class="pctlbl">of ${refLabel}</span>
+        </div>
+        <div class="meter"><i style="width:${d.pct}%"></i></div>
+      </div>
+    </article>`).join("");
+  };
+
+  render(deals, "deals", "new");
+  render(vintage, "vintage", "used");
+
+  /* ---------- browse-by-threshold ---------- */
+  const more = [
+    {item:"Crane Song Flamingo", ask:1800, nw:2990, pct:60, seller:"Al! Stone", ads:9, loc:"79774 Albbruck", vb:false, cat:"Mic preamp", group:"outboard", ref:"used", caveat:"reference is a 2024 snapshot", href:"/s-anzeige/crane-song-flamingo-mikrofonvorverstaerker-stereo/3456348317-74-8309"},
+    {item:"Golden Age Project Pre-73 MkIII", ask:205, nw:335, pct:61, seller:"Johannes", ads:9, loc:"01307 Dresden", vb:true, cat:"Preamp", group:"outboard", ref:"new", caveat:"vs. current MkIV", href:"/s-anzeige/golden-age-audio-project-pre-73-mk-iii-inkl-rack-kit/3480026052-172-28644"},
+    {item:"Manley Massive Passive", ask:3690, nw:5998, pct:62, seller:"Tasten Teddy", ads:8, loc:"58455 Witten", vb:true, cat:"Tube EQ", group:"outboard", ref:"new", href:"/s-anzeige/manley-massive-passive-stereo-eq/3472736080-74-1020"},
+    {item:"Eventide Space", ask:280, nw:449, pct:62, seller:"j_vp", ads:6, loc:"04177 Leipzig", vb:false, cat:"Reverb pedal", group:"outboard", ref:"new", href:"/s-anzeige/space-eventide-/3482022864-74-30063"},
+    {item:"dbx 286s", ask:110, nw:174, pct:63, seller:"Privat", ads:18, loc:"53117 Bonn", vb:true, cat:"Preamp", group:"outboard", ref:"new", href:"/s-anzeige/mikrofonvorverstaerker-dbx-286-s/3483204633-74-23706"},
+    {item:"Shure SM7B", ask:250, nw:398, pct:63, seller:"AntMit19!", ads:2, loc:"55566 Bad Sobernheim", vb:false, cat:"Microphone", group:"outboard", ref:"new", caveat:"flagged: 2-ad seller", href:"/s-anzeige/shure-sm7b/3485132424-172-18949"},
+    {item:"Manley Reference Cardioid", ask:2230, nw:3499, pct:64, seller:"R.E.", ads:5, loc:"48565 Steinfurt", vb:true, cat:"Tube microphone", group:"outboard", ref:"new", href:"/s-anzeige/manley-reference-cardioid-black/3455639217-74-1294"},
+    {item:"Millennia HV-3D (8-ch)", ask:3400, nw:5299, pct:64, seller:"HP", ads:9, loc:"80331 München", vb:false, cat:"Mic preamp", group:"outboard", ref:"new", href:"/s-anzeige/millennia-hv-3d-8-kanal-high-end-mikrofonvorverstaerker/3476454974-74-6443"},
+    {item:"Manley Voxbox", ask:3199, nw:4999, pct:64, seller:"Martin Schnella", ads:7, loc:"37520 Osterode", vb:true, cat:"Tube channel strip", group:"outboard", ref:"new", href:"/s-anzeige/manley-voxbox-chanelstrip-2-jahre-alt-top-zustand/3482945091-74-2804"},
+    {item:"Eventide Space", ask:300, nw:449, pct:67, seller:"Alex", ads:2, loc:"22769 Hamburg-Altona", vb:true, cat:"Reverb pedal", group:"outboard", ref:"new", caveat:"flagged: 2-ad seller", href:"/s-anzeige/eventide-space/3476759468-74-9434"},
+    {item:"Eventide Space", ask:300, nw:449, pct:67, seller:"rollof", ads:2, loc:"13057 Berlin", vb:false, cat:"Reverb pedal", group:"outboard", ref:"new", caveat:"flagged: 2-ad seller", href:"/s-anzeige/eventide-space/3482604055-74-9627"},
+    {item:"Manley Voxbox", ask:3400, nw:4999, pct:68, seller:"Andreas Schneider", ads:2, loc:"96052 Bamberg", vb:false, cat:"Tube channel strip", group:"outboard", ref:"new", caveat:"flagged: 2-ad seller", href:"/s-anzeige/manley-voxbox-channel-strip-mic-preamp/3474949830-172-6901"},
+    {item:"Eventide Space", ask:330, nw:449, pct:73, seller:"Frederic", ads:2, loc:"71093 Weil im Schönbuch", vb:false, cat:"Reverb pedal", group:"outboard", ref:"new", caveat:"flagged: 2-ad seller", href:"/s-anzeige/eventide-space/3484688409-74-8785"},
+    {item:"Shure SM7B", ask:290, nw:398, pct:73, seller:"El Lias", ads:2, loc:"75015 Bretten", vb:true, cat:"Microphone", group:"outboard", ref:"new", caveat:"flagged: 2-ad seller", href:"/s-anzeige/shure-sm7b-unbenutzt-/3484652311-172-8800"},
+    {item:"Warm Audio WA-8000", ask:799, nw:1069, pct:75, seller:"Leon Deleu", ads:2, loc:"79541 Lörrach", vb:true, cat:"Tube microphone", group:"outboard", ref:"new", caveat:"flagged: 2-ad seller", href:"/s-anzeige/warm-audio-wa-8000-roehrenmikrofon-inkl-koffer-zubehoer/3480553953-172-8070"},
+
+    {item:"TL Audio PA 5001", ask:250, nw:395, pct:63, seller:"Privat", ads:25, loc:"44145 Dortmund", vb:false, cat:"Mic preamp", group:"vintage", ref:"used", href:"/s-anzeige/tl-audio-pa-5001-mic-preamp/3485090014-74-1106"},
+    {item:"Lexicon LXP-15", ask:199, nw:310, pct:64, seller:"dealer", ads:266, loc:"71522 Backnang", vb:false, cat:"Reverb", group:"vintage", ref:"used", href:"/s-anzeige/lexicon-effektgeraet-lxp-15/3412467309-172-8355"},
+    {item:"Eventide H3000", ask:1800, nw:2800, pct:64, seller:"Falke", ads:18, loc:"95213 Münchberg", vb:false, cat:"Harmonizer", group:"vintage", ref:"used", caveat:"sold untested — Bastlerware", href:"/s-anzeige/eventide-h3000-ultra-harmonizer-ungeprueft-bastlerware/3483560416-172-7228"},
+    {item:"Aphex 107 Tubessence", ask:160, nw:235, pct:68, seller:"Privat", ads:2, loc:"92421 Schwandorf", vb:true, cat:"Tube preamp", group:"vintage", ref:"used", caveat:"flagged: 2-ad seller", href:"/s-anzeige/aphex-107-tubessence-preamp-usa-manley-killer/3461476750-74-5751"},
+    {item:"API 500 VPR 10-slot rack", ask:950, nw:1400, pct:68, seller:"bibos", ads:4, loc:"83623 Dietramszell", vb:false, cat:"500-series rack", group:"vintage", ref:"used", href:"/s-anzeige/api-audio-500-vpr-10-slot/3354175846-74-6194"},
+    {item:"Drawmer DS501 Powergate", ask:239, nw:351, pct:68, seller:"Felix Lips", ads:30, loc:"42115 Wuppertal", vb:true, cat:"Noise gate", group:"vintage", ref:"used", href:"/s-anzeige/drawmer-powergate-ds501-dual-channel-noise-gate-studio-rack-retro/3475224500-172-1584"},
+    {item:"Lexicon PCM81", ask:690, nw:1000, pct:69, seller:"dealer", ads:705, loc:"73479 Ellwangen", vb:false, cat:"Effects processor", group:"vintage", ref:"used", caveat:"sticky case, basic test only", href:"/s-anzeige/lexicon-pcm81-digital-effects-processor-v1-00/3459272286-172-8830"},
+    {item:"Lexicon MPX1", ask:200, nw:285, pct:70, seller:"dealer", ads:705, loc:"73479 Ellwangen", vb:false, cat:"Effects processor", group:"vintage", ref:"used", href:"/s-anzeige/lexicon-mpx1-multiple-processor-fx-v1-10/3458025282-172-8830"},
+    {item:"dbx 160A", ask:330, nw:449, pct:73, seller:"Christoph", ads:11, loc:"80689 München", vb:true, cat:"VCA compressor", group:"vintage", ref:"used", href:"/s-anzeige/dbx-160a-kompressor-compressor-limiter/3480566135-74-16395"},
+    {item:"Lexicon 480L + LARC", ask:3800, nw:5200, pct:73, seller:"David Küblböck", ads:4, loc:"83395 Freilassing", vb:false, cat:"Reverb", group:"vintage", ref:"used", caveat:"V4.1, two units listed", href:"/s-anzeige/lexicon-480l-mit-neuer-larc-von-doug-jane-recordings/3483715495-74-6273"},
+    {item:"Focusrite ISA 430 MkII", ask:1450, nw:1995, pct:73, seller:"Heidl, Peter", ads:7, loc:"50733 Köln", vb:true, cat:"Channel strip", group:"vintage", ref:"used", href:"/s-anzeige/focusrite-isa-430-mkii/3421099444-172-993"},
+    {item:"Lexicon PCM92", ask:1350, nw:833, pct:162, seller:"Klaus Hucke", ads:3, loc:"19322 Wittenberge", vb:true, cat:"Reverb", group:"vintage", ref:"used", caveat:"above market"},
+    {item:"Neumann KM84", ask:2600, nw:2100, pct:124, seller:"Alexander", ads:5, loc:"13086 Berlin", vb:true, cat:"Microphone", group:"vintage", ref:"used", caveat:"above market"},
+    {item:"Focusrite Liquid Channel", ask:1880, nw:1339, pct:140, seller:"Die Terzime", ads:168, loc:"22850 Norderstedt", vb:true, cat:"Channel strip", group:"vintage", ref:"used", caveat:"above market"},
+    {item:"AKG C414 B-XLII", ask:900, nw:750, pct:120, seller:"RM", ads:23, loc:"40629 Düsseldorf", vb:false, cat:"Microphone", group:"vintage", ref:"used", caveat:"above market"},
+    {item:"Empirical Labs LilFreQ", ask:2000, nw:1890, pct:106, seller:"Ben", ads:4, loc:"86485 Biberbach", vb:true, cat:"EQ", group:"vintage", ref:"used", caveat:"above market"},
+    {item:"SSL XLogic Alpha Channel", ask:625, nw:587, pct:106, seller:"dealer", ads:109, loc:"66386 St. Ingbert", vb:false, cat:"Channel strip", group:"vintage", ref:"used", caveat:"above market"},
+    {item:"sE Electronics 4400a", ask:410, nw:304, pct:135, seller:"Stephen Scholz", ads:4, loc:"88356 Ostrach", vb:false, cat:"Microphone", group:"vintage", ref:"used", caveat:"above market"},
+    {item:"Behringer T1953", ask:185, nw:120, pct:154, seller:"dealer", ads:27, loc:"55252 Wiesbaden", vb:false, cat:"Tube preamp", group:"vintage", ref:"used", caveat:"above market"}
+  ];
+
+  const ALL = [
+    ...deals.map(d => ({...d, group:"outboard", ref:"new"})),
+    ...vintage.map(d => ({...d, group:"vintage", ref:"used"})),
+    ...more
+  ].sort((a, b) => a.pct - b.pct);
+
+  const GROUPS = [
+    {key:"outboard", label:"Outboard"},
+    {key:"vintage",  label:"Vintage"},
+    {key:"pedal",    label:"Guitar pedals"},
+    {key:"synth",    label:"Synths"},
+    {key:"modular",  label:"Modular"}
+  ];
+  const active = new Set(GROUPS.map(g => g.key));
+
+  const chips = document.getElementById("chips");
+  chips.innerHTML = GROUPS.map(g => {
+    const n = ALL.filter(r => r.group === g.key).length;
+    return `<button class="filter" type="button" data-k="${g.key}" aria-pressed="true"${n ? "" : " disabled"}>${g.label} (${n})</button>`;
+  }).join("");
+
+  const slider = document.getElementById("thresh");
+  const thVal  = document.getElementById("thVal");
+  const list   = document.getElementById("browse");
+  const empty  = document.getElementById("browseEmpty");
+  const hitN   = document.getElementById("hitCount");
+  const hitW   = document.getElementById("hitWord");
+
+  const paint = () => {
+    const t = +slider.value;
+    thVal.textContent = t;
+    slider.style.setProperty("--fill", ((t - 25) / (120 - 25) * 100) + "%");
+
+    const rows = ALL.filter(r => r.pct <= t && active.has(r.group));
+    hitN.textContent = rows.length;
+    hitW.textContent = rows.length === 1 ? "listing" : "listings";
+    empty.hidden = rows.length > 0;
+
+    list.innerHTML = rows.map((d, i) => `
+      <article class="deal">
+        <div class="rank mono">${i + 1}</div>
+        <div class="who">
+          <div class="item">${d.href
+            ? `<a href="https://www.kleinanzeigen.de${esc(d.href)}" target="_blank" rel="noopener">${esc(d.item)}</a>`
+            : esc(d.item)}</div>
+          <div class="meta">
+            <span>${esc(d.cat)}</span>
+            <span class="chip">${esc(d.seller)} · ${d.ads} ads</span>
+            <span class="mono">${esc(d.loc)}</span>
+            ${d.caveat ? `<span class="chip flag">${esc(d.caveat)}</span>` : ""}
+          </div>
+        </div>
+        <div class="money">
+          <div class="ask mono">${eur(d.ask)}${d.vb ? " VB" : ""}</div>
+          <div class="new mono">${d.ref} <s>${eur(d.nw)}</s></div>
+        </div>
+        <div class="pct">
+          <div class="pctrow">
+            <span class="pctnum mono"${d.pct > 100 ? ' style="color:var(--warn)"' : ""}>${d.pct}%</span>
+            <span class="pctlbl">of ${d.ref}</span>
+          </div>
+          <div class="meter"><i style="width:${Math.min(d.pct, 100)}%${d.pct > 100 ? ";background:var(--warn)" : ""}"></i></div>
+        </div>
+      </article>`).join("");
+  };
+
+  slider.addEventListener("input", paint);
+  chips.addEventListener("click", e => {
+    const b = e.target.closest(".filter");
+    if (!b) return;
+    const k = b.dataset.k;
+    if (active.has(k)) { active.delete(k); b.setAttribute("aria-pressed", "false"); }
+    else { active.add(k); b.setAttribute("aria-pressed", "true"); }
+    paint();
+  });
+  paint();
+
+</script>
