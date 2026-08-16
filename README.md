@@ -40,20 +40,11 @@ Every row in the report says which benchmark it used.
 | | |
 |---|---|
 | Ads scraped (all searches paged to exhaustion) | **7,833** |
-| Priced against a reference | **803** |
-| Past the seller filter | **213** |
-| Qualifying at ≤60% | **93** |
+| Priced against a reference | **902** |
+| Past the seller filter | **246** |
+| Qualifying at ≤60% | **102** |
 
-Guitar pedals 95 · Synths 41 · Outboard 37 · Vintage 24 · Modular 16.
-
-The earlier run read only page 1 of each search and saw 1,231 ads. Kleinanzeigen paginates, and a
-single query like `strymon` returns 127 results — paging every search is what took the corpus to
-7,833.
-
-The remaining ~7,000 ads are **unpriced, not rejected**: mostly one-off Eurorack modules and
-boutique pedals where neither source has two comparable listings, and a reference built on one data
-point is a guess. They are kept in `data/ads_v2.json` so a third source (ModularGrid) could score
-them without rescraping.
+Guitar pedals 95 · Modular 49 · Synths 41 · Outboard 37 · Vintage 24.
 
 ## Three reference sources
 

@@ -14,7 +14,7 @@ STOP = set("""verkaufe verkauf neuwertig neu top zustand sehr gut guter gutem in
 ovp originalverpackung wie np vb selten kaum benutzt gebraucht wenig tausch preis euro der die das
 ein eine fur von aus im in zu auf set bundle versand moglich abholung privat nichtraucher garantie
 rechnung synthesizer synth pedal effektgerat modul module eurorack hp analog digital vintage rare
-guitar gitarre bass black white silver schwarz weiss limited edition mk mkii mk2 v2 series serie
+guitar gitarre bass black white silver schwarz weiss limited edition series serie
 b-stock stock case""".split())
 
 def toks(s):

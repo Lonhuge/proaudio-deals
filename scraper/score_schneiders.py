@@ -53,8 +53,12 @@ def main():
         k = key3(a["title"])
         m = best(a["title"], sl.get(k))
         src = "new"
-        if not m and k in wb:                     # discontinued: archived shop price
-            m, src = (wb[k]["slug"].replace("-", " "), wb[k]["price"]), "archived"
+        if not m and k in wb:
+            # archived shop price — must clear the same containment bar as a live hit,
+            # or a MIDI Thing V1 gets priced against the V2 page that happens to be archived
+            slug = wb[k]["slug"].replace("-", " ")
+            if ident(slug) <= ident(a["title"]):
+                m, src = (slug, wb[k]["price"]), "archived"
         if not m:
             continue
         name, ref = m

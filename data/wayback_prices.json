@@ -163,5 +163,115 @@
   "slug": "intellijel-designs-dual-adsr",
   "price": 229,
   "snapshot": "20200918"
+ },
+ "intellijel rubicon 2": {
+  "slug": "intellijel-designs-rubicon-2",
+  "price": 389,
+  "snapshot": "20200926"
+ },
+ "intellijel shifty": {
+  "slug": "intellijel-designs-shifty",
+  "price": 184,
+  "snapshot": "20200920"
+ },
+ "intellijel springray 2": {
+  "slug": "intellijel-designs-springray-2",
+  "price": 262,
+  "snapshot": "20200920"
+ },
+ "intellijel stereo out": {
+  "slug": "intellijel-designs-stereo-out-1u",
+  "price": 66,
+  "snapshot": "20200929"
+ },
+ "intellijel uvca ii": {
+  "slug": "intellijel-designs-uvca-ii",
+  "price": 160,
+  "snapshot": "20200804"
+ },
+ "make noise bruxa": {
+  "slug": "make-noise-bruxa",
+  "price": 458,
+  "snapshot": "20240710"
+ },
+ "make noise contour": {
+  "slug": "make-noise-contour",
+  "price": 116,
+  "snapshot": "20200811"
+ },
+ "echophon make noise": {
+  "slug": "make-noise-echophon",
+  "price": 418,
+  "snapshot": "20200924"
+ },
+ "make noise jumbler": {
+  "slug": "make-noise-format-jumbler",
+  "price": 112,
+  "snapshot": "20200815"
+ },
+ "make noise multimod": {
+  "slug": "make-noise-multimod",
+  "price": 429,
+  "snapshot": "20250321"
+ },
+ "mmg make noise": {
+  "slug": "make-noise-multimode-gate-mmg",
+  "price": 262,
+  "snapshot": "20200925"
+ },
+ "make noise prss": {
+  "slug": "make-noise-prss-pnt",
+  "price": 99,
+  "snapshot": "20240616"
+ },
+ "make noise qmmg": {
+  "slug": "make-noise-qmmg-2024-black-gold-edition",
+  "price": 889,
+  "snapshot": "20250317"
+ },
+ "make noise resynthesizer": {
+  "slug": "make-noise-resynthesizer",
+  "price": 5590,
+  "snapshot": "20250326"
+ },
+ "make noise rosie": {
+  "slug": "make-noise-rosie",
+  "price": 151,
+  "snapshot": "20200813"
+ },
+ "make noise skiff": {
+  "slug": "make-noise-skiff-power-adapter",
+  "price": 28,
+  "snapshot": "20201001"
+ },
+ "make noise sto": {
+  "slug": "make-noise-sto",
+  "price": 213,
+  "snapshot": "20200929"
+ },
+ "make noise xoh": {
+  "slug": "make-noise-xoh",
+  "price": 116,
+  "snapshot": "20200922"
+ },
+ "make noise xpo": {
+  "slug": "make-noise-xpo",
+  "price": 478,
+  "snapshot": "20221205"
+ },
+ "moog mother 32": {
+  "slug": "moog-mother-32",
+  "price": 560,
+  "snapshot": "20200918"
+ },
+ "mutable beads": {
+  "slug": "mutable-instruments-beads",
+  "price": 289,
+  "snapshot": "20210421"
+ },
+ "blades mutable": {
+  "slug": "mutable-instruments-blades",
+  "price": 307,
+  "snapshot": "20210226"
  }
 }
