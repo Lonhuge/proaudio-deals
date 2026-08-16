@@ -1,0 +1,167 @@
+{
+ "4ms catalyst sequencer": {
+  "slug": "4ms-catalyst-sequencer",
+  "price": 419,
+  "snapshot": "20240224"
+ },
+ "4ms listen io": {
+  "slug": "4ms-listen-io",
+  "price": 126,
+  "snapshot": "20200927"
+ },
+ "4ms quad clock": {
+  "slug": "4ms-quad-clock-distributor",
+  "price": 243,
+  "snapshot": "20200926"
+ },
+ "acid rain chainsaw": {
+  "slug": "acid-rain-technology-chainsaw",
+  "price": 288,
+  "snapshot": "20200813"
+ },
+ "acid rain technology": {
+  "slug": "acid-rain-technology-navigator",
+  "price": 96,
+  "snapshot": "20200813"
+ },
+ "after later filthy": {
+  "slug": "after-later-audio-filthy",
+  "price": 99,
+  "snapshot": "20210417"
+ },
+ "flip after later": {
+  "slug": "after-later-audio-flip-1u",
+  "price": 89,
+  "snapshot": "20211203"
+ },
+ "after later quarks": {
+  "slug": "after-later-audio-quarks-elements",
+  "price": 318,
+  "snapshot": "20230129"
+ },
+ "alm busy circuits": {
+  "slug": "alm-busy-circuits-mmmidi",
+  "price": 112,
+  "snapshot": "20200930"
+ },
+ "bastl 1983": {
+  "slug": "bastl-instruments-1983-alu",
+  "price": 311,
+  "snapshot": "20200929"
+ },
+ "befaco trs 1u": {
+  "slug": "befaco-1u-trs",
+  "price": 45,
+  "snapshot": "20231001"
+ },
+ "befaco sallen-key filter": {
+  "slug": "befaco-bf-22-sallen-key-filter",
+  "price": 232,
+  "snapshot": "20201027"
+ },
+ "befaco even vco": {
+  "slug": "befaco-even-vco",
+  "price": 223,
+  "snapshot": "20200924"
+ },
+ "befaco hexmix befaco": {
+  "slug": "befaco-hexmix",
+  "price": 463,
+  "snapshot": "20201001"
+ },
+ "befaco inamp": {
+  "slug": "befaco-inamp",
+  "price": 109,
+  "snapshot": "20220528"
+ },
+ "befaco midi thing": {
+  "slug": "befaco-midi-thing-v2",
+  "price": 319,
+  "snapshot": "20240421"
+ },
+ "befaco mixer": {
+  "slug": "befaco-mixer",
+  "price": 105,
+  "snapshot": "20220629"
+ },
+ "befaco output v3": {
+  "slug": "befaco-output-v3",
+  "price": 141,
+  "snapshot": "20200927"
+ },
+ "befaco rampage": {
+  "slug": "befaco-rampage",
+  "price": 301,
+  "snapshot": "20200805"
+ },
+ "befaco slew limiter": {
+  "slug": "befaco-slew-limiter",
+  "price": 128,
+  "snapshot": "20220925"
+ },
+ "vc adsr befaco": {
+  "slug": "befaco-vc-adsr",
+  "price": 184,
+  "snapshot": "20200927"
+ },
+ "frap tools sc": {
+  "slug": "frap-tools-cgm-creative-mixer-sc-stereo-channel",
+  "price": 189,
+  "snapshot": "20220808"
+ },
+ "frap tools cgm": {
+  "slug": "frap-tools-cgm-master",
+  "price": 126,
+  "snapshot": "20200927"
+ },
+ "frap tools falistri": {
+  "slug": "frap-tools-falistri",
+  "price": 389,
+  "snapshot": "20200805"
+ },
+ "usta frap tools": {
+  "slug": "frap-tools-usta",
+  "price": 730,
+  "snapshot": "20201001"
+ },
+ "hexinverter vcno noise": {
+  "slug": "hexinverter-vcno-vc-noise-oscillator",
+  "price": 194,
+  "snapshot": "20200929"
+ },
+ "instruo i-o47": {
+  "slug": "instruo-i-o47",
+  "price": 301,
+  "snapshot": "20200924"
+ },
+ "instruo tagh": {
+  "slug": "instruo-tagh",
+  "price": 298,
+  "snapshot": "20221231"
+ },
+ "instruo": {
+  "slug": "instruo-vinca",
+  "price": 194,
+  "snapshot": "20200925"
+ },
+ "intellijel aux mix": {
+  "slug": "intellijel-designs-aux-mix-1u",
+  "price": 219,
+  "snapshot": "20250214"
+ },
+ "intellijel buff mult": {
+  "slug": "intellijel-designs-buff-mult-1u",
+  "price": 41,
+  "snapshot": "20200804"
+ },
+ "intellijel dixie ii": {
+  "slug": "intellijel-designs-dixie-ii",
+  "price": 239,
+  "snapshot": "20200922"
+ },
+ "intellijel dual adsr": {
+  "slug": "intellijel-designs-dual-adsr",
+  "price": 229,
+  "snapshot": "20200918"
+ }
+}
